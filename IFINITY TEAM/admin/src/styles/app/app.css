@@ -11,5 +11,17 @@
 }
 
 .main-layout {
-  transition: all .3s;
+  transition: all .2s;
+}
+
+.nav-link {
+  color: rga(255, 255, 255, 0.65);
+}
+
+.nav-link:active {
+  color: '#fff',
+}
+
+.nav-link:hover {
+  color: '#fff',
 }

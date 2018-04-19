@@ -8,10 +8,8 @@ import Dashboard from './Dashboard';
 import OrderList from './OrderList';
 import BrandList from './BrandList';
 
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
-const SubMenu = Menu.SubMenu;
-
 
 const logoStyle = {
   height: 32,
@@ -49,24 +47,34 @@ class Home extends Component {
           <div style={logoStyle} />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
-              <Icon type="dashboard" />
-              <span>Dashboard</span>
+              <Link to="/app">
+                <Icon type="dashboard" />
+                <span>Dashboard</span>
+              </Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="user" />
-              <span>User</span>
+              <Link to="/app/user">
+                <Icon type="user" />
+                <span>Account</span>
+              </Link>
             </Menu.Item>
             <Menu.Item key="3">
-              <Icon type="gift" />
-              <span>Product</span>
+              <Link to="/app/product">
+                <Icon type="gift" />
+                <span>Product</span>
+              </Link>
             </Menu.Item>
             <Menu.Item key="4">
-              <Icon type="shop" />
-              <span>Brand</span>
+              <Link to="/app/brand">
+                <Icon type="shop" />
+                <span>Brand</span>
+              </Link>
             </Menu.Item>
-            <Menu.Item key="4">
-              <Icon type="shopping-cart" />
-              <span>Order</span>
+            <Menu.Item key="5">
+              <Link to="/app/order">
+                <Icon type="shopping-cart" />
+                <span>Order</span>
+              </Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -84,7 +92,12 @@ class Home extends Component {
           </Header>
           <Content style={{ margin: '16px 16px' }}>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              <p>Content</p>
+              <Switch>
+                <Route exact path="/app" component={Dashboard} />
+                <Route path="/app/product" component={ProductList} />
+                <Route path="/app/order" component={OrderList} />
+                <Route path="/app/brand" component={BrandList} />
+              </Switch>
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
@@ -92,19 +105,6 @@ class Home extends Component {
           </Footer>
         </Layout>
       </Layout>
-      // <div>
-      //   <h2>Home</h2>
-      //   <Link to="/app">Home</Link> / 
-      //   <Link to="/app/product">Product</Link> / 
-      //   <Link to="/app/order">Product</Link> / 
-      //   <Link to="/app/brand">Brand</Link>
-      //   <Switch>
-      //     <Route exact path="/app" component={Dashboard} />
-      //     <Route path="/app/product" component={ProductList} />
-      //     <Route path="/app/order" component={OrderList} />
-      //     <Route path="/app/brand" component={BrandList} />
-      //   </Switch>
-      // </div>
     )
   }
 }
