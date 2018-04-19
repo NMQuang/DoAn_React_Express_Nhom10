@@ -9,7 +9,7 @@ import OrderList from './OrderList';
 import BrandList from './BrandList';
 
 import { Layout, Menu, Icon } from 'antd';
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Footer, Sider } = Layout;
 
 const logoStyle = {
   height: 32,
@@ -90,16 +90,14 @@ class Home extends Component {
               style={{ float: 'right' }}
             />
           </Header>
-          <Content style={{ margin: '16px 16px' }}>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              <Switch>
-                <Route exact path="/app" component={Dashboard} />
-                <Route path="/app/product" component={ProductList} />
-                <Route path="/app/order" component={OrderList} />
-                <Route path="/app/brand" component={BrandList} />
-              </Switch>
-            </div>
-          </Content>
+          <div style={{ padding: 16, minHeight: 600, }}>
+            <Switch>
+              <Route exact path="/app" component={Dashboard} />
+              <Route path="/app/product" component={ProductList} />
+              <Route path="/app/order" component={OrderList} />
+              <Route path="/app/brand" component={BrandList} />
+            </Switch>
+          </div>
           <Footer style={{ textAlign: 'center' }}>
             Infinity Team ©2018 Made with love <Icon type="heart" style={{ color: 'red' }} />
           </Footer>
