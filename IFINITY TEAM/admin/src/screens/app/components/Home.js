@@ -7,6 +7,8 @@ import ProductList from './ProductList';
 import Dashboard from './Dashboard';
 import OrderList from './OrderList';
 import BrandList from './BrandList';
+import CategoryList from './Category';
+import AccountList from './Account';
 
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Footer, Sider } = Layout;
@@ -53,24 +55,30 @@ class Home extends Component {
               </Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link to="/app/user">
+              <Link to="/app/account">
                 <Icon type="user" />
                 <span>Account</span>
               </Link>
             </Menu.Item>
             <Menu.Item key="3">
+              <Link to="/app/category">
+                <Icon type="appstore-o" />
+                <span>Category</span>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="4">
               <Link to="/app/product">
                 <Icon type="gift" />
                 <span>Product</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="4">
+            <Menu.Item key="5">
               <Link to="/app/brand">
                 <Icon type="shop" />
                 <span>Brand</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="5">
+            <Menu.Item key="6">
               <Link to="/app/order">
                 <Icon type="shopping-cart" />
                 <span>Order</span>
@@ -93,8 +101,10 @@ class Home extends Component {
           <div style={{ padding: 16, minHeight: 600, }}>
             <Switch>
               <Route exact path="/app" component={Dashboard} />
+              <Route path="/app/account" component={AccountList} />
               <Route path="/app/product" component={ProductList} />
               <Route path="/app/order" component={OrderList} />
+              <Route path="/app/category" component={CategoryList} />
               <Route path="/app/brand" component={BrandList} />
             </Switch>
           </div>
