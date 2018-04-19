@@ -13,8 +13,10 @@ const loginFormContainer = {
 }
 
 const loginFormStyle = {
+  textAlign: 'center',
   margin: '0 auto',
-  maxWidth: 300,
+  width: 500,
+  maxWidth: 600,
 }
 
 const loginFormButton = {
@@ -54,7 +56,7 @@ class SignIn extends Component {
                 valuePropName: 'checked',
                 initialValue: true,
               })(
-                <Checkbox>Remember me</Checkbox>
+                <Checkbox style={{ float: 'left' }}>Remember me</Checkbox>
               )}
               <Link style={forgotPasswordStyle} to="/forgot">Forgot password</Link>
               <Link to="/app">
