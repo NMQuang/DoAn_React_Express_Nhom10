@@ -3,12 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 
-import ProductList from './ProductList';
-import Dashboard from './Dashboard';
-import OrderList from './OrderList';
-import BrandList from './BrandList';
-import CategoryList from './Category';
-import AccountList from './Account';
+import ProductList from '../Product';
+import Dashboard from '../Dashboard';
+import OrderList from '../Order';
+import BrandList from '../Brand';
+import CategoryList from '../Category';
+import AccountList from '../Account';
 
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Footer, Sider } = Layout;
