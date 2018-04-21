@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactEcharts from '../../../components/ReactECharts';
+import ReactEcharts from '../../../../components/ReactECharts';
 
 const heatmapHours = [
   '12a', '1a', '2a', '3a', '4a', '5a', '6a',

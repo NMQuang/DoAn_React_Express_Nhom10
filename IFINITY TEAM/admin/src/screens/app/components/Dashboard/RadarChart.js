@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactEcharts from '../../../components/ReactECharts';
-import CHARTCONFIG from '../../../constants/ChartConfig';
+import ReactEcharts from '../../../../components/ReactECharts';
+import CHARTCONFIG from '../../../../constants/ChartConfig';
 
 const radar2 = {};
 
