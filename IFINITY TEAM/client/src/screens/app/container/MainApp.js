@@ -3,7 +3,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import loadable from 'react-loadable';
 import ProductList from '../components/ProductList';
 import ProductDetail from '../components/ProductDetail';
-import HomePage from '../components/HomePage';
+import Home from '../components/Home';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 
@@ -16,7 +16,7 @@ class MainApp extends React.Component {
            <Router>
             <div>
               <Switch>
-                <Route exact path="/" component={HomePage} />
+                <Route exact path="/" component={Home} />
                 <Route exact path="/product" component={ProductList} />
                 <Route exact path="/product/:productId" component={ProductDetail} />
               </Switch>

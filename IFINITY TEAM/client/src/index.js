@@ -7,7 +7,7 @@ import reduxThunk from 'redux-thunk';
 import reduxLogger from 'redux-logger';
 import ReactDOM from 'react-dom';
 
-import MainApp from './containers/app';
+import MainApp from './containers';
 import reducers from './reducers';
 
 const store = createStore(
