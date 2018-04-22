@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { Header, Container, Divider, Icon } from 'semantic-ui-react';
+import { Header, Container, Divider, Icon, Grid } from 'semantic-ui-react';
+
+import styles from './styles.css';
 
 export default class Footer extends Component {
   render() {
-    return (
-      <Container>
-        <Divider />
-        <p>This is Footer</p>
-      </Container>
-    )
+    return <div className={styles.footer} />;
   }
 }

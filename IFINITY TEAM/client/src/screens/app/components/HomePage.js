@@ -8,11 +8,7 @@ export default class HomePage extends Component {
       <Container>
         <p>This is HomePage</p>
         <Link to="/product">Product List</Link>
-        <Divider />
-        <p style={{display: 'flex', justifyContent: 'flex-end',}}>
-          Made with <Icon name="heart" color="red"/> by Quyen Pham Khac
-        </p>
       </Container>
-    )
+    );
   }
 }

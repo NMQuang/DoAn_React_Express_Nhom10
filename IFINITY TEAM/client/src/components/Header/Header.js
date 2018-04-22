@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Container, Divider, Icon } from 'semantic-ui-react';
+import { Container, Input, Icon, Grid, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
+import styles from './styles.css';
 
 export default class Header extends Component {
   render() {
-    return (
-      <Container>
-        <p>This is Header</p>
-        <Divider />
-      </Container>
-    )
+    return <div className={styles.header} />;
   }
 }
