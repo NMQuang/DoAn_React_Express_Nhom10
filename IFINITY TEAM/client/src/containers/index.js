@@ -1,2 +1,2 @@
-import MainApp from './MainApp';
+import MainApp from './App';
 export default MainApp;
