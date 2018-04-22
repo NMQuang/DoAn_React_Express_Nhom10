@@ -38,7 +38,7 @@ export default class Header extends Component {
             </div>
             <div className="col-lg-2">
               <div className="header-cart">
-                <a href="cart.html">
+                <a href={'/cart'}>
                   <i className="fa fa-shopping-cart" aria-hidden="true" />
                   Giỏ hàng
                   <b className="header-cart-count">0</b>
