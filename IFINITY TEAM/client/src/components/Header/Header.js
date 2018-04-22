@@ -72,9 +72,9 @@ export default class Header extends Component {
                   &nbsp; <b>CHI NHÁNH</b> &nbsp;<b className="caret" />
                 </button>
                 <div className="dropdown-content">
-                  <a href="agency.html">Quận 1</a>
-                  <a href="agency.html">Quận 2</a>
-                  <a href="agency.html">Quận 3</a>
+                  <Link to="/agency">Quận 1</Link>
+                  <Link to="/agency">Quận 2</Link>
+                  <Link to="/agency">Quận 3</Link>
                 </div>
               </li>
             </ul>
