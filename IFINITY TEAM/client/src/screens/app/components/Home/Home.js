@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import Slide from './Slide';
-import SaleFood from './SaleFood';
+import SaleWine from './SaleWine';
+import TopSaleWine from './TopSaleWine';
+
 class Home extends Component {
     render() {
         return(
             <div class="container" style={{ minHeight: 500}}>
                 <Slide/>
                 <hr class="hr-text" data-content="Món ngon giảm giá"/>
-                <SaleFood/>
+                <SaleWine/>
                 <hr class="hr-text" data-content="Đặt hàng nhiều trong tuần"/>
+                <TopSaleWine/>
             </div>
         )
     }

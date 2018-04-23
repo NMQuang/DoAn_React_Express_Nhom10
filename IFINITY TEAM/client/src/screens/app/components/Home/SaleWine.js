@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SlideFood from './SlideFood';
+import SlideItemWine from './SlideItemWine';
 
-class SaleFood extends Component {
+class SaleWine extends Component {    
     render() {
         return(
             <div>  
@@ -17,27 +17,27 @@ class SaleFood extends Component {
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <div class="row">
-                                        <SlideFood/>
-                                        <SlideFood/>
-                                        <SlideFood/>
-                                        <SlideFood/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
                                     </div>    
                                 </div> 
                                 <div class="item">
                                     <div class="row">
-                                        <SlideFood/>
-                                        <SlideFood/>
-                                        <SlideFood/>
-                                        <SlideFood/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
                                     </div>    
                                 </div>
                                 
                                 <div class="item">
                                     <div class="row">
-                                        <SlideFood/>
-                                        <SlideFood/>
-                                        <SlideFood/>
-                                        <SlideFood/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
+                                        <SlideItemWine/>
                                     </div>    
                                 </div>
                             
@@ -53,4 +53,4 @@ class SaleFood extends Component {
         )
     }
 }
-export default SaleFood;
+export default SaleWine;

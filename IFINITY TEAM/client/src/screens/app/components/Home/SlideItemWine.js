@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SlideFood extends Component {
+class SlideItemWine extends Component {
     render() {
         return(
             <div class="col-md-3">
@@ -15,4 +15,4 @@ class SlideFood extends Component {
         )
     }
 }
-export default SlideFood
+export default SlideItemWine;
