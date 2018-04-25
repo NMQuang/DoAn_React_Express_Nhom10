@@ -22,7 +22,7 @@ export default class Header extends Component {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Tên món ăn"
+                    placeholder="Nhập tên rượu"
                   />
                   <div className="input-group-btn">
                     <button
@@ -49,10 +49,10 @@ export default class Header extends Component {
           <div className="navbar-menu">
             <ul className="nav navbar-nav">
               <li className="menu-li">
-                <a href="index.html">
+                <Link to='/'>
                   <i className="fa fa-home" aria-hidden="true" /> &nbsp;{' '}
                   <b>TRANG CHỦ</b>
-                </a>
+                </Link>
               </li>
               <li className="dropdown">
                 <button className="dropbtn">
@@ -60,7 +60,7 @@ export default class Header extends Component {
                   &nbsp; <b>DANH MỤC</b> &nbsp;<b className="caret" />
                 </button>
                 <div className="dropdown-content">
-                  <Link to="/product">All</Link>
+                  <Link to="/wine">All</Link>
                   <a href="food-list.html">Món gà</a>
                   <a href="food-list.html">Món cá</a>
                   <a href="food-list.html">Đồ lẩu</a>

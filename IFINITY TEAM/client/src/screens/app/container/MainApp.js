@@ -13,6 +13,7 @@ import Footer from '../../../components/Footer';
 import Order from '../components/Order';
 import OrderHistory from '../components/OrderHistory';
 import Cart from '../components/Cart';
+import Wine from '../components/Wine';
 class MainApp extends React.Component {
   render() {
     const {match, location} = this.props;
@@ -33,6 +34,7 @@ class MainApp extends React.Component {
               < Route exact path="/order" component={Order}/>
               <Route exact path="/orderhistory" component={OrderHistory}/>
               < Route exact path="/cart" component={Cart}/>
+              < Route exact path="/wine" component={Wine}/>
             </Switch>
           </div>
         </Router>
