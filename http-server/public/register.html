@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/font-awesome.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    
     <!-- JS -->
 </head>
 <body>
@@ -16,15 +17,15 @@
         <div class="navbar-search">
             <div class="col-lg-2">
                 <a href="index.html" style="text-decoration:none;">
-                    <p class="header-logo"> My Food </p>
+                    <p class="header-logo"> Infinity Wine </p>
                 </a>
             </div>
             <div class="col-lg-8">
                 <form class="navbar-form" role="search" style="margin-left: 28px">
-                    <div class="input-group col-md-12" style="">
-                        <input type="text" class="form-control" placeholder="Tên món ăn" name="q">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control" placeholder="Tên loại rượu" name="q">
                         <div class="input-group-btn">
-                            <button id="btn-search" class="btn btn-default flat-butt" type="submit">
+                            <button id="btn-search" class="btn btn-default" type="submit">
                                 Tìm kiếm
                             </button>
                         </div>
@@ -52,25 +53,30 @@
                 </li>
                 <li class="dropdown">
                     <button class="dropbtn">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                        &nbsp <b>DANH MỤC</b> &nbsp<b class="caret"></b>
+                        <i class="fa fa-leaf" aria-hidden="true"></i>
+                        &nbsp <b>NHÃN HIỆU</b> &nbsp<b class="caret"></b>
                     </button>
                     <div class="dropdown-content">
-                        <a href="food-list.html">Tất cả</a>
-                        <a href="food-list.html">Món gà</a>
-                        <a href="food-list.html">Món cá</a>
-                        <a href="food-list.html">Đồ lẩu</a>
+                        <a href="list-by-brand.html">Tất cả</a>
+                        <a href="list-by-brand.html">Chivas</a>
+                        <a href="list-by-brand.html">Hennessy</a>
+                        <a href="list-by-brand.html">Johnie Walker</a>
+                        <a href="list-by-brand.html">Re'my Martin</a>
+                        <a href="list-by-brand.html">Macallan</a>
                     </div>
                 </li>
                 <li class="dropdown">
                     <button class="dropbtn">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        &nbsp <b>CHI NHÁNH</b> &nbsp<b class="caret"></b>
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        &nbsp <b>LOẠI RƯỢU</b> &nbsp<b class="caret"></b>
                     </button>
                     <div class="dropdown-content">
-                        <a href="agency.html">Quận 1</a>
-                        <a href="agency.html">Quận 2</a>
-                        <a href="agency.html">Quận 3</a>
+                        <a href="list-by-category.html">Tất cả</a>
+                        <a href="list-by-category.html">Cognac & Armagnac</a>
+                        <a href="list-by-category.html">Whisky & Bourbon</a>
+                        <a href="list-by-category.html">Brandy</a>
+                        <a href="list-by-category.html">Vodka</a>
+                        <a href="list-by-category.html">Champagne</a>
                     </div>
                 </li>
             </ul>
@@ -109,9 +115,9 @@
         <form class="form-horizontal">
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-3 control-label" for="phoneNumber">Số điện thoại</label>
+                <label class="col-md-3 control-label" for="phoneNumber">Email</label>
                 <div class="col-md-6">
-                    <input id="phoneNumber" name="phoneNumber" type="text" placeholder="" class="form-control input-md" required="">
+                    <input id="email" name="phoneNumber" type="text" placeholder="" class="form-control input-md" required="">
                 </div>
             </div>
             <div class="form-group">
@@ -142,11 +148,24 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-md-3 control-label" for="phoneNumber">Số điện thoại</label>
+                <div class="col-md-6">
+                    <input id="phoneNumber" name="phoneNumber" type="text" placeholder="" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-md-3 control-label" for="location">Địa chỉ</label>
                 <div class="col-md-6">
                     <textarea id="location" name="location" placeholder="" class="form-control input-md" required=""></textarea>
                 </div>
             </div>
+             <div class="form-group">
+                <label class="col-md-3 control-label" for="location">reCAPTCHA</label>
+                <div class="col-md-6">
+                    <div class="g-recaptcha " data-sitekey="6LeXu1UUAAAAAOOr5IHYf_hWIdqAfm4TiW4JF9PQ" style="margin: 0 auto ;"></div>
+                </div>
+            </div>
+            
             <div class="form-group">
                 <div style="text-align: center">
                     <button id="submit" name="submit" class="btn btn-primary btn-lg btn-register">Đăng ký</button>
@@ -194,6 +213,7 @@
     <!--/.footer-->
 </footer>
 <!-- Script -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/myjs.js"></script>
