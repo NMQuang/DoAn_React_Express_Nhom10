@@ -29,6 +29,7 @@ div.header {
   font-size: 30px;
   font-weight: bold;
   font-family: Lobster;
+  text-align: center;
 }
 
 .header-cart {
@@ -109,7 +110,7 @@ li.menu-li a:hover {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -457,12 +458,13 @@ textarea {
 
 .food-head h3 {
   margin-top: 30px;
+  margin-bottom: 24px;
 }
 
 .food-head p {
-  margin-top: 30px;
+  margin-top: 8px;
   font-size: 16px;
-  height: 150px;
+  height: 100%;
 }
 
 .table-branches {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Food - Trang chủ</title>
+    <title>Infinity Wine - Trang chủ</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/font-awesome.css"/>
@@ -16,13 +16,13 @@
         <div class="navbar-search">
             <div class="col-lg-2">
                 <a href="index.html" style="text-decoration:none;">
-                    <p class="header-logo"> My Food </p>
+                    <p class="header-logo"> Infinity Wine </p>
                 </a>
             </div>
             <div class="col-lg-8">
                 <form class="navbar-form" role="search" style="margin-left: 28px">
-                    <div class="input-group col-md-12" style="">
-                        <input type="text" class="form-control" placeholder="Tên món ăn" name="q">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control" placeholder="Tên loại rượu" name="q">
                         <div class="input-group-btn">
                             <button id="btn-search" class="btn btn-default" type="submit">
                                 Tìm kiếm
@@ -52,25 +52,30 @@
                 </li>
                 <li class="dropdown">
                     <button class="dropbtn">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                        &nbsp <b>DANH MỤC</b> &nbsp<b class="caret"></b>
+                        <i class="fa fa-leaf" aria-hidden="true"></i>
+                        &nbsp <b>NHÃN HIỆU</b> &nbsp<b class="caret"></b>
                     </button>
                     <div class="dropdown-content">
-                        <a href="food-list.html">Tất cả</a>
-                        <a href="food-list.html">Món gà</a>
-                        <a href="food-list.html">Món cá</a>
-                        <a href="food-list.html">Đồ lẩu</a>
+                        <a href="list-by-brand.html">Tất cả</a>
+                        <a href="list-by-brand.html">Chivas</a>
+                        <a href="list-by-brand.html">Hennessy</a>
+                        <a href="list-by-brand.html">Johnie Walker</a>
+                        <a href="list-by-brand.html">Re'my Martin</a>
+                        <a href="list-by-brand.html">Macallan</a>
                     </div>
                 </li>
                 <li class="dropdown">
                     <button class="dropbtn">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        &nbsp <b>CHI NHÁNH</b> &nbsp<b class="caret"></b>
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        &nbsp <b>LOẠI RƯỢU</b> &nbsp<b class="caret"></b>
                     </button>
                     <div class="dropdown-content">
-                        <a href="agency.html">Quận 1</a>
-                        <a href="agency.html">Quận 2</a>
-                        <a href="agency.html">Quận 3</a>
+                        <a href="list-by-category.html">Tất cả</a>
+                        <a href="list-by-category.html">Cognac & Armagnac</a>
+                        <a href="list-by-category.html">Whisky & Bourbon</a>
+                        <a href="list-by-category.html">Brandy</a>
+                        <a href="list-by-category.html">Vodka</a>
+                        <a href="list-by-category.html">Champagne</a>
                     </div>
                 </li>
             </ul>
@@ -113,21 +118,27 @@
             </ol>
             <div class='carousel-inner' role='listbox'>
                 <div class='item item-top-slide active'>
-                    <img class="img-responsive" src='images/top-mon-an.jpg' alt='doan'>
+                    <img class="img-responsive" src='images/gioi-thieu/gioi-thieu-01.jpg' alt='doan'>
                     <div class='carousel-caption'>
-                        <h1>Bánh xèo</h1>
+                        <h1>Hennessy</h1>
                     </div>
                 </div>
                 <div class='item item-top-slide'>
-                    <img class="img-responsive" src='images/lau-bo.jpg' alt='doan'>
+                    <img class="img-responsive" src='images/gioi-thieu/gioi-thieu-02.jpg' alt='doan'>
                     <div class='carousel-caption'>
-                        <h1>Lẩu bò</h1>
+                        <h1>Chivas</h1>
                     </div>
                 </div>
                 <div class='item item-top-slide'>
-                    <img class="img-responsive" src='images/mon-ngon.png' alt='doan'>
+                    <img class="img-responsive" src='images/gioi-thieu/gioi-thieu-03.jpg' alt='doan'>
                     <div class='carousel-caption'>
-                        <h1>Món ngon mỗi ngày</h1>
+                        <h1>Johnie Walker</h1>
+                    </div>
+                </div>
+                <div class='item item-top-slide'>
+                    <img class="img-responsive" src='images/gioi-thieu/gioi-thieu-04.jpg' alt='doan'>
+                    <div class='carousel-caption'>
+                        <h1>Red Vin</h1>
                     </div>
                 </div>
             </div>
@@ -143,8 +154,8 @@
     </div>
     <!-- End top slide -->
 
-    <!-- Món ăn giảm giá -->
-    <hr class="hr-text" data-content="Món ngon giảm giá">
+    <!-- Top 10 sản phẩm mới nhất -->
+    <hr class="hr-text" data-content="Sản phẩm mới nhất">
     <div class="row">
         <div class="col-md-12">
             <div id="Carousel" class="carousel my-carousel slide carousel-fade">
@@ -158,42 +169,87 @@
                     <div class="item active">
                         <div class="row">
                             <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-01.png"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
                                     <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
+                                        <h4>Chivas Regal</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 550.000 VND</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-02.png"
+                                         class="img-responsive" style="width: 236px; height: 295px">
                                     <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
+                                        <h4>Chivas Regal 12</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 620.000 VND</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-03.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
                                     <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
+                                        <h4>Chivas Regal 18</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-04.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
                                     <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
+                                        <h4>Chivas Resolve</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.250.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--.row-->
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-05.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Chivas Regal 18 Gift Box</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-06.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Chivas Regal 18 Blue</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.400.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-07.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Blue Signature</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.600.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-08.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Chivas Royal Salute</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.250.000 VND</p>
                                     </div>
                                 </a>
                             </div>
@@ -204,88 +260,22 @@
                     <div class="item">
                         <div class="row">
                             <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-03.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px">
                                     <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
+                                        <h4>Chivas Regal 18</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/chivas/chivas-04.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px">
                                     <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
-                                    <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
-                                    <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!--.row-->
-                    </div>
-                    <!--.item-->
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
-                                    <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
-                                    <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
-                                    <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#" class="thumbnail thumbnail-carousel">
-                                    <img alt="Image" src="http://placehold.it/250x200"
-                                         class="img-responsive">
-                                    <div class="caption">
-                                        <h4>Tên món ăn</h4>
-                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 100.000 VND</p>
+                                        <h4>Chivas Resolve</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.250.000 VND</p>
                                     </div>
                                 </a>
                             </div>
@@ -301,155 +291,285 @@
             <!--.Carousel-->
         </div>
     </div>
-    <!-- End món ăn giảm giá -->
+    <!-- End 10 sản phẩm mới nhất -->
 
-    <!-- Món ăn mua nhiều trong tuần -->
-    <hr class="hr-text" data-content="Đặt hàng nhiều trong tuần">
-    <div class="col-md-10 col-md-offset-1">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <div class="box img-responsive">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive">
-                        <div class="img-responsive overlay"></div>
-                        <a class="btn btn-success"><i class="fa fa-cart-plus" aria-hidden="true"></i> &nbsp; Thêm vào giỏ</a>
+    <!-- Top 10 sản phẩm bán chạy -->
+    <hr class="hr-text" data-content="Sản phẩm bán chạy">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="Carousel-1" class="carousel my-carousel slide carousel-fade">
+                <ol class="carousel-indicators my-carousel-indicators">
+                    <li data-target="#Carousel-1" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel-1" data-slide-to="1"></li>
+                    <li data-target="#Carousel-1" data-slide-to="2"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-01.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Hennessy VS</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-02.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-03.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-04.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP Limitted</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--.row-->
                     </div>
-                    <div class="caption">
-                        <a href="#" style="text-decoration: none">
-                            <h4>Tên món ăn</h4>
-                            <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                        </a>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-05.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.350.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-06.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.400.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-07.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.000.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-08.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy XO</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.400.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--.row-->
                     </div>
+                    <!--.item-->
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-03.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/hennessy/hen-04.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px">
+                                    <div class="caption">
+                                        <h4>Hennessy VSOP Limitted</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--.row-->
+                    </div>
+                    <!--.item-->
                 </div>
+                <!--.carousel-inner-->
+                <a data-slide="prev" href="#Carousel-1" class="left carousel-control my-carousel-control">‹</a>
+                <a data-slide="next" href="#Carousel-1" class="right carousel-control my-carousel-control">›</a>
             </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-            <div href="#" class="thumbnail">
-                <div class="box">
-                    <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                </div>
-                <div class="caption">
-                    <h4>Tên món ăn</h4>
-                    <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div href="#" class="thumbnail">
-                    <div class="box">
-                        <img alt="Image" src="images/suon-xao-chua-ngot.jpg" class="img-responsive my-image">
-                    </div>
-                    <div class="caption">
-                        <h4>Tên món ăn</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> 100.000 - 100.000 vnd</p>
-                    </div>
-                </div>
-            </div>
+            <!--.Carousel-->
         </div>
     </div>
-    <!-- End Món ăn mua nhiều trong tuần -->
+    <!-- End 10 sản phẩm bán chạy -->
+
+    <!-- Top sản phẩm xem nhiều nhất -->
+    <hr class="hr-text" data-content="Sản phẩm xem nhiều">
+     <div class="row">
+        <div class="col-md-12">
+            <div id="Carousel-2" class="carousel my-carousel slide carousel-fade">
+                <ol class="carousel-indicators my-carousel-indicators">
+                    <li data-target="#Carousel-2" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel-2" data-slide-to="1"></li>
+                    <li data-target="#Carousel-2" data-slide-to="2"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-01.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-02.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-03.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-04.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--.row-->
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-05.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.350.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-06.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.400.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-07.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.000.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-8.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.400.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--.row-->
+                    </div>
+                    <!--.item-->
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-01.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/johnie/john-02.jpg"
+                                         class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Johnie Walker</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--.row-->
+                    </div>
+                    <!--.item-->
+                </div>
+                <!--.carousel-inner-->
+                <a data-slide="prev" href="#Carousel-2" class="left carousel-control my-carousel-control">‹</a>
+                <a data-slide="next" href="#Carousel-2" class="right carousel-control my-carousel-control">›</a>
+            </div>
+            <!--.Carousel-->
+        </div>
+    </div>
+    <!-- End Top sản phẩm xem nhiều nhất -->
 </div>
 <!-- End body -->
 

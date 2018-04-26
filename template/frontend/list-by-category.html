@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tìm kiếm theo loại rượu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/list.css"/>
+    <!-- JS -->
+</head>
+<body>
+<!-- Header -->
+<div class="header">
+    <div class="container">
+        <!-- Navbar search -->
+        <div class="navbar-search">
+            <div class="col-lg-2">
+                <a href="index.html" style="text-decoration:none;">
+                    <p class="header-logo"> Infinity Wine </p>
+                </a>
+            </div>
+            <div class="col-lg-8">
+                <form class="navbar-form" role="search" style="margin-left: 28px">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control" placeholder="Tên loại rượu" name="q">
+                        <div class="input-group-btn">
+                            <button id="btn-search" class="btn btn-default" type="submit">
+                                Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-2">
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        Giỏ hàng
+                        <b class="header-cart-count">0</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar search -->
+        <!-- Navbar menu-->
+        <div class="navbar-menu">
+            <ul class="nav navbar-nav">
+                <li class="menu-li">
+                    <a href="index.html">
+                        <i class="fa fa-home" aria-hidden="true"></i> &nbsp <b>TRANG CHỦ</b>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa fa-leaf" aria-hidden="true"></i>
+                        &nbsp <b>NHÃN HIỆU</b> &nbsp<b class="caret"></b>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="list-by-brand.html">Tất cả</a>
+                        <a href="list-by-brand.html">Chivas</a>
+                        <a href="list-by-brand.html">Hennessy</a>
+                        <a href="list-by-brand.html">Brandy</a>
+                        <a href="list-by-brand.html">Re'my Martin</a>
+                        <a href="list-by-brand.html">Macallan</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        &nbsp <b>LOẠI RƯỢU</b> &nbsp<b class="caret"></b>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="list-by-category.html">Tất cả</a>
+                        <a href="list-by-category.html">Cognac & Armagnac</a>
+                        <a href="list-by-category.html">Whisky & Bourbon</a>
+                        <a href="list-by-category.html">Brandy</a>
+                        <a href="list-by-category.html">Vodka</a>
+                        <a href="list-by-category.html">Champagne</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="menu-li">
+                    <a href="register.html"><i class="fa fa-pencil-square-o"></i> &nbsp <b>ĐĂNG KÝ</b></a>
+                </li>
+                <li class="dropdown menu-li" style="padding-right: 15px">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                        <i class="fa fa-sign-in"></i> &nbsp<b>ĐĂNG NHẬP</b>
+                    </a>
+                    <div class="dropdown-menu form-login" style="padding: 15px; padding-bottom: 10px;">
+                        <form class="form-horizontal" accept-charset="UTF-8">
+                            <input id="usernameLogin" class="form-control form-login" type="text" name="usernameLogin" placeholder="Số điện thoại..." />
+                            <input id="passwordLogin" class="form-control form-login" type="password" name="passwordLogin" placeholder="Mật khẩu..."/>
+                            <label class="form-check-label">
+                                <input id="saveLogin" name="saveLogin" type="checkbox" class="form-check-input">
+                                Ghi nhớ đăng nhập
+                            </label>
+                            <button class="btn btn-primary pull-right" type="submit">Đăng nhập</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- End navbar -->
+    </div>
+</div>
+<!-- End header -->
+
+
+<!-- Body -->
+<div class="container">
+    <div class="col-lg-10 col-lg-offset-1">
+        <!-- Hiển thị thông tin tìm kiếm ở đây -->
+        <h4 style="padding-top: 14px"> Tìm kiếm nâng cao</b></h4>
+        <div class="col-md-12 list-search">
+            <div class="form-group search-item">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-book" aria-hidden="true"></i></div>
+                    <input type="text" class="form-control"  placeholder="Tên sản phẩm">
+                </div>
+            </div>
+            <div class="form-group search-item">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-gg" aria-hidden="true"></i></div>
+                    <input type="number" class="form-control"  placeholder="Giá tiền">
+                </div>
+            </div>
+            <div class="form-group search-item">
+                <select class="form-control " style="min-width: 175px">
+                    <option>Nhà sản xuất</option>
+                    <option>Chivas</option>
+                    <option>Hennessy</option>
+                    <option>Johnie Walker</option>
+                    <option>Re'my Martin</option>
+                    <option>Macallan</option>
+                </select>
+            </div>
+           <div class="form-group search-item">
+                <select class="form-control " style="min-width: 175px">
+                    <option>Brandy</option>
+                    <option>Loại rượu</option>
+                    <option>Armagnac</option>
+                    <option>Whisky</option>
+                    <option>Champagne</option>
+                    <option>Vodka</option>
+                    <option>Cognac</option>
+                </select>
+            </div>
+            <div class="form-group search-item">
+                <button class="btn btn-primary" style="min-width: 120px"><i class="fa fa-search" aria-hidden="true"></i> <b>Search</b></button>
+            </div>
+        </div>
+        <hr>
+        <h4 style="padding-top: 14px"> Kết quả tìm kiếm theo: <b>Loại rượu Brandy</b></h4>
+        <hr>
+        <!-- Hiển thị kết quả tìm kiếm ở đây-->
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-01.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Rivalet</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-02.jpg"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>ST Re'my</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-03.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Marc Roger</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-04.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Bonsard</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-05.jpg"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Napoleon</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.350.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-06.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Courriere</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.400.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-07.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Martin XO</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.000.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-08.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Courriere</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.400.000 VND</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-01.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Rivalet</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-02.jpg"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>ST Re'my</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                    </div>
+                </a>
+            </div>
+           <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-07.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Martin XO</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.000.000 VND</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail thumbnail-carousel">
+                    <img alt="Image" src="images/brandy/bran-08.png"
+                            class="img-responsive" style="width: 236px; height: 295px;">
+                    <div class="caption">
+                        <h4>Courriere</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.400.000 VND</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End body -->
+
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row col-md-10 col-md-offset-1">
+                <div class="col-md-4">
+                    <h3> Thông tin </h3>
+                    <ul>
+                        <li><p><i class="fa fa-phone"></i> &nbsp Hotline: 0169xxxxxx </p></li>
+                        <li><p><i class="fa fa-users"></i> &nbsp Lượng người truy cập: 1000000 </p></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Liên hệ </h3>
+                    <ul>
+                        <li><a href="#"> Admission </a></li>
+                        <li><a href="#"> Academic </a></li>
+                        <li><a href="#"> Career </a></li>
+                        <li><a href="#"> Administration </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Đăng ký theo dõi </h3>
+                    <ul>
+                        <li><a href="#"> <i class="fa fa-facebook-square"></i>&nbsp Facebook </a></li>
+                        <li><a href="#"> <i class="fa fa-twitter-square"></i>&nbsp Twitter </a></li>
+                        <li><a href="#"> <i class="fa fa-linkedin-square"></i>&nbsp Linkedin </a></li>
+                        <li><a href="#"> <i class="fa fa-google-plus-square"></i>&nbsp Google Plus </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+</footer>
+<!-- Script -->
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/myjs.js"></script>
+</body>
+</html>

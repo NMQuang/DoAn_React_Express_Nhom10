@@ -1,0 +1,475 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Infinity Wine</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/list.css"/>
+    <!-- JS -->
+</head>
+<body>
+<!-- Header -->
+<div class="header">
+    <div class="container">
+        <!-- Navbar search -->
+        <div class="navbar-search">
+            <div class="col-lg-2">
+                <a href="index.html" style="text-decoration:none;">
+                    <p class="header-logo"> Infinity Wine </p>
+                </a>
+            </div>
+            <div class="col-lg-8">
+                <form class="navbar-form" role="search" style="margin-left: 28px">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control" placeholder="Tên loại rượu" name="q">
+                        <div class="input-group-btn">
+                            <button id="btn-search" class="btn btn-default" type="submit">
+                                Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-2">
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        Giỏ hàng
+                        <b class="header-cart-count">0</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar search -->
+        <!-- Navbar menu-->
+        <div class="navbar-menu">
+            <ul class="nav navbar-nav">
+                <li class="menu-li">
+                    <a href="index.html">
+                        <i class="fa fa-home" aria-hidden="true"></i> &nbsp <b>TRANG CHỦ</b>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa fa-leaf" aria-hidden="true"></i>
+                        &nbsp <b>NHÃN HIỆU</b> &nbsp<b class="caret"></b>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="list-by-brand.html">Tất cả</a>
+                        <a href="list-by-brand.html">Chivas</a>
+                        <a href="list-by-brand.html">Hennessy</a>
+                        <a href="list-by-brand.html">Johnie Walker</a>
+                        <a href="list-by-brand.html">Re'my Martin</a>
+                        <a href="list-by-brand.html">Macallan</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        &nbsp <b>LOẠI RƯỢU</b> &nbsp<b class="caret"></b>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="list-by-category.html">Tất cả</a>
+                        <a href="list-by-category.html">Cognac & Armagnac</a>
+                        <a href="list-by-category.html">Whisky & Bourbon</a>
+                        <a href="list-by-category.html">Brandy</a>
+                        <a href="list-by-category.html">Vodka</a>
+                        <a href="list-by-category.html">Champagne</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="menu-li">
+                    <a href="register.html"><i class="fa fa-pencil-square-o"></i> &nbsp <b>ĐĂNG KÝ</b></a>
+                </li>
+                <li class="dropdown menu-li" style="padding-right: 15px">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                        <i class="fa fa-sign-in"></i> &nbsp<b>ĐĂNG NHẬP</b>
+                    </a>
+                    <div class="dropdown-menu form-login" style="padding: 15px; padding-bottom: 10px;">
+                        <form class="form-horizontal" accept-charset="UTF-8">
+                            <input id="usernameLogin" class="form-control form-login" type="text" name="usernameLogin" placeholder="Số điện thoại..." />
+                            <input id="passwordLogin" class="form-control form-login" type="password" name="passwordLogin" placeholder="Mật khẩu..."/>
+                            <label class="form-check-label">
+                                <input id="saveLogin" name="saveLogin" type="checkbox" class="form-check-input">
+                                Ghi nhớ đăng nhập
+                            </label>
+                            <button class="btn btn-primary pull-right" type="submit">Đăng nhập</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- End navbar -->
+    </div>
+</div>
+<!-- End header -->
+
+<!-- Body -->
+<div class="container">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div class="row food-info">
+            <div class="food-head">
+                <div class="col-lg-6" style="padding-top: 32px;">
+                    <img src="images/chivas/chivas-06.jpg" class="img-responsive center-block wine-img-style" style="max-height: 400px; margin: 0 auto;"/>
+                </div>
+                <div class="col-lg-6">
+                    <h3 style="text-align: center">Chivas 18 Blue Signature</h3>
+                    <p><strong><i class="fa fa-leaf" aria-hidden="true"></i> Mô tả</strong>: Chivas 18 Blue Signature sử dụng các loại Whisky nguyên liệu ban đầu được lựa chọn tỷ mỷ với tỷ lệ cao Whisky Mạch nha từ lò chưng cất Strathisla và Longmom để tạo ra độ cân bằng và hương vị mềm mượt của rượu .</p>
+                    <p><strong><i class="fa fa-dollar" aria-hidden="true"></i> Giá bán</strong>: 1.400.000</p>
+                    <p><strong><i class="fa fa-eye" aria-hidden="true"></i> Lượt xem</strong>: 5.000 lượt</p>
+                    <p><strong><i class="fa fa-shopping-cart" aria-hidden="true"></i> Lượt mua</strong>: 120 lượt</p>
+                    <p><strong><i class="fa fa-shopping-map" aria-hidden="true"></i> Xuất xứ</strong>: Scotland</p>
+                    <p><strong><i class="fa fa-shopping-tag" aria-hidden="true"></i> Loại rượu</strong>: Brandy</p>
+                    <p><strong><i class="fa fa-shopping-diamond" aria-hidden="true"></i> Nhà sản xuất</strong>: Chivas</p>
+                    <div class="text-center" style="margin-top: 32px; margin-bottom: 32px;">
+                        <button class="btn btn-success btn-lg">Đặt hàng</button>
+                        <a href="cart.html" class="btn btn-info btn-lg">Xem giỏ hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <!-- Sản phẩm cùng hãng -->
+       <hr class="hr-text" data-content="Sản phẩm cùng hãng">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="Carousel" class="carousel my-carousel slide carousel-fade">
+                    <ol class="carousel-indicators my-carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                        <li data-target="#Carousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-01.png"
+                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Chivas Regal</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 550.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-02.png"
+                                            class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Chivas Regal 12</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 620.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-03.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Chivas Regal 18</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-04.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Chivas Resolve</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.250.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--.row-->
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-05.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Chivas Regal 18 Gift Box</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-06.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Chivas Regal 18 Blue</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.400.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-07.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Blue Signature</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.600.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-08.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Chivas Royal Salute</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.250.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--.row-->
+                        </div>
+                        <!--.item-->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-03.jpg"
+                                                class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Chivas Regal 18</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="wine.html" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/chivas/chivas-04.jpg"
+                                                class="img-responsive" style="width: 236px; height: 295px">
+                                        <div class="caption">
+                                            <h4>Chivas Resolve</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.250.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--.row-->
+                        </div>
+                        <!--.item-->
+                    </div>
+                    <!--.carousel-inner-->
+                    <a data-slide="prev" href="#Carousel" class="left carousel-control my-carousel-control">‹</a>
+                    <a data-slide="next" href="#Carousel" class="right carousel-control my-carousel-control">›</a>
+                </div>
+                <!--.Carousel-->
+            </div>
+        </div>
+        <!-- End Sản phẩm cùng hãng -->
+
+        <!-- Sản phẩm cùng loại -->
+       <hr class="hr-text" data-content="Sản phẩm cùng loại">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="Carousel-1" class="carousel my-carousel slide carousel-fade">
+                    <ol class="carousel-indicators my-carousel-indicators">
+                        <li data-target="#Carousel-1" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel-1" data-slide-to="1"></li>
+                        <li data-target="#Carousel-1" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                 <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-01.png"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Rivalet</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-02.jpg"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>ST Re'my</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-03.png"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Marc Roger</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-04.png"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Bonsard</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--.row-->
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-05.jpg"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Napoleon</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.350.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-06.png"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Courriere</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.400.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-07.png"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Martin XO</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.000.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail thumbnail-carousel">
+                                        <img alt="Image" src="images/brandy/bran-08.png"
+                                                class="img-responsive" style="width: 236px; height: 295px;">
+                                        <div class="caption">
+                                            <h4>Courriere</h4>
+                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.400.000 VND</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--.row-->
+                        </div>
+                        <!--.item-->
+                        <div class="item">
+                            <div class="col-md-3">
+                                <a href="#" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/brandy/bran-01.png"
+                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Rivalet</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/brandy/bran-02.jpg"
+                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>ST Re'my</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        <div class="col-md-3">
+                                <a href="#" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/brandy/bran-07.png"
+                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Martin XO</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.000.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="thumbnail thumbnail-carousel">
+                                    <img alt="Image" src="images/brandy/bran-08.png"
+                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                    <div class="caption">
+                                        <h4>Courriere</h4>
+                                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.400.000 VND</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--.row-->
+                        </div>
+                        <!--.item-->
+                    </div>
+                    <!--.carousel-inner-->
+                    <a data-slide="prev" href="#Carousel-1" class="left carousel-control my-carousel-control">‹</a>
+                    <a data-slide="next" href="#Carousel-1" class="right carousel-control my-carousel-control">›</a>
+                </div>
+                <!--.Carousel-->
+            </div>
+        </div>
+        <!-- End Sản phẩm cùng loại -->
+    </div>
+</div>
+<!-- End body -->
+
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row col-md-10 col-md-offset-1">
+                <div class="col-md-4">
+                    <h3> Thông tin </h3>
+                    <ul>
+                        <li><p><i class="fa fa-phone"></i> &nbsp Hotline: 0169xxxxxx </p></li>
+                        <li><p><i class="fa fa-users"></i> &nbsp Lượng người truy cập: 1000000 </p></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Liên hệ </h3>
+                    <ul>
+                        <li><a href="#"> Admission </a></li>
+                        <li><a href="#"> Academic </a></li>
+                        <li><a href="#"> Career </a></li>
+                        <li><a href="#"> Administration </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Đăng ký theo dõi </h3>
+                    <ul>
+                        <li><a href="#"> <i class="fa fa-facebook-square"></i>&nbsp Facebook </a></li>
+                        <li><a href="#"> <i class="fa fa-twitter-square"></i>&nbsp Twitter </a></li>
+                        <li><a href="#"> <i class="fa fa-linkedin-square"></i>&nbsp Linkedin </a></li>
+                        <li><a href="#"> <i class="fa fa-google-plus-square"></i>&nbsp Google Plus </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+</footer>
+<!-- Script -->
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/myjs.js"></script>
+</body>
+</html>
