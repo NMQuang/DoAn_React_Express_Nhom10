@@ -1,0 +1,39 @@
+<div class="panel-heading">
+    <h3 class="panel-title pull-left fix">Sửa tình trạng đơn hàng</h3>
+	<a href="/order/orderList" class="btn btn-default pull-right fix"><b><</b> Trở lại</a>
+</div>
+<div class="panel-body">
+    <form action="/order/editOrder?id={{orderId}}" method="POST" class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="sel3" class="col-sm-2 control-label">Tình trạng đơn hàng</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="sel3" name="status">
+                    <option value="0">New</option>
+                    <option value="1">Shipping</option>
+                    <option value="2">Finish</option>
+                </select>
+            </div>
+        </div>
+        {{#if showError}}
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Lỗi!</strong> {{errorMsg}} ...
+        </div>
+        {{/if}}
+        {{#if showResult}}
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Thành công!</strong> Thay đổi tình trạng thành công
+        </div>
+        {{/if}}
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    Sửa tình trạng đơn hàng
+                </button>
+            </div>
+        </div>
+    </form> 
+</div>
+

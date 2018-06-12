@@ -1,0 +1,39 @@
+<div class="panel-heading">
+    <h3 class="panel-title pull-left fix">Danh sách sản phẩm</h3>
+	<a href="/product/addProduct" class="btn btn-default pull-right fix"><b>+</b> Thêm sản phẩm mới</a>
+</div>
+<div class="panel-body">
+    <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th class="text-left red-text-table">ID</th>
+                <th>Tên sản phẩm</th>
+                <th>Thumbnail</th>
+                <th>Giá</th>
+                <th>Nhãn hiệu</th>
+                <th>Loại</th>
+                <th>Mô tả</th>
+                <th class="text-right">Xóa / Sửa</th>
+            </tr>
+        </thead>
+        {{#each products}}
+        <tr>
+            <td style="width: 100px;">{{productId}}</td>
+            <td style="width: 200px;">{{productName}}</td>
+            <td style="width: 200px;"><img src={{thumbnail}} alt={{productName}} style="max-width: 100px;"/></td>
+            <td>{{price}}</td>
+            <td>{{brand.brandName}}</td>
+            <td>{{category.categoryName}}</td>
+            <td>{{description}}</td>
+            <td class="text-right">
+                <a class="btn btn-default btn-xs" href="/product/delete?id={{productId}}" role="button">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+                <a class="btn btn-default btn-xs" href="/product/editProduct?id={{productId}}" role="button">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

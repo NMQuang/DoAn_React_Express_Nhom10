@@ -1,0 +1,72 @@
+<div class="panel-heading">
+    <h3 class="panel-title pull-left fix">Sửa thông tin sản phẩm</h3>
+	<a href="/product/productList" class="btn btn-default pull-right fix"><b><</b> Trở lại</a>
+</div>
+<div class="panel-body">
+    <form action="/product/editProduct?id={{product.productId}}" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="txtProductName" class="col-sm-2 control-label">Tên sản phẩm</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="txtProductName" placeholder="Tên sản phẩm" value="{{product.productName}}" name="productName" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="imgProduct" class="col-sm-2 control-label">Thumbnail</label>
+            <div class="col-sm-4">
+                <input type="file" accept=".png, .jpg, .jpeg" id="imgProduct" name="thumbnail">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtProductPrice" class="col-sm-2 control-label">Giá sản phẩm</label>
+            <div class="col-sm-4">
+                <input type="number" class="form-control" id="txtProductPrice" min="0" placeholder="Giá sản phẩm"  value="{{product.price}}" name="price" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtProductDescription" class="col-sm-2 control-label">Mô tả</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="txtProductDescription" placeholder="Tên sản phẩm"  value="{{product.description}}" name="description" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="sel1" class="col-sm-2 control-label">Nhãn hiệu</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="sel1" name="brand">
+                    {{#each brands}}
+                    <option value={{_id}}>{{brandName}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="sel2" class="col-sm-2 control-label">Loại rượu</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="sel2" name="category">
+                    {{#each categories}}
+                    <option value={{_id}}>{{categoryName}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+        {{#if showError}}
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Lỗi!</strong> {{errorMsg}}
+        </div>
+        {{/if}}
+        {{#if showResult}}
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Thành công!</strong> Cập nhật thành công
+        </div>
+        {{/if}}
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    Cập nhật thông tin
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

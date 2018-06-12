@@ -1,0 +1,31 @@
+<div class="panel-heading">
+    <h3 class="panel-title pull-left fix">Danh sách loại rượu</h3>
+	<a href="/category/addCategory" class="btn btn-default pull-right fix"><b>+</b> Thêm loại rượu mới</a>
+</div>
+<div class="panel-body">
+    <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th class="text-left red-text-table">ID</th>
+                <th>Tên loại rượu</th>
+                <th>Mô tả</th>
+                <th class="text-right">Xóa / Sửa</th>
+            </tr>
+        </thead>
+        {{#each categories}}
+        <tr>
+            <td>{{categoryId}}</td>
+            <td>{{categoryName}}</td>
+            <td>{{description}}</td>
+            <td class="text-right">
+                <a class="btn btn-default btn-xs" href="/category/delete?id={{categoryId}}" role="button">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+                <a class="btn btn-default btn-xs" href="/category/editCategory?id={{categoryId}}" role="button">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

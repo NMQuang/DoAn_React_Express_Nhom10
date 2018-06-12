@@ -1,0 +1,40 @@
+<div class="panel-heading">
+    <h3 class="panel-title pull-left fix">Thêm loại rượu</h3>
+	<a href="/category/categoryList" class="btn btn-default pull-right fix"><b><</b> Trở lại</a>
+</div>
+<div class="panel-body">
+    <form action="/category/addCategory" method="POST" class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="txtCatName" class="col-sm-2 control-label">Tên loại rượu</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="txtCatName" placeholder="Tên loại rượu" name="categoryName" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtCatDescription" class="col-sm-2 control-label">Mô tả</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="txtCatDescription" placeholder="Mô tả" name="description" required>
+            </div>
+        </div>
+        {{#if showError}}
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Lỗi!</strong> {{errorMsg}}
+        </div>
+        {{/if}}
+        {{#if showResult}}
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Thành công!</strong> Tạo loại rượu thành công.
+        </div>
+        {{/if}}
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    Tạo loại rượu mới
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

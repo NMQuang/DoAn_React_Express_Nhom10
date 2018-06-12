@@ -1,0 +1,46 @@
+<div class="panel-heading">
+    <h3 class="panel-title pull-left fix">Danh sách đơn hàng</h3>
+</div>
+<div class="panel-body">
+    <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th class="text-left red-text-table">ID</th>
+                <th>Khách hàng</th>
+                <th>Sản phẩm</th>
+                <th>Tổng tiền (VNĐ)</th>
+                <th>Thời gian đặt</th>
+                <th>Tình trạng đơn hàng</th>
+                <th class="text-right">Sửa</th>
+            </tr>
+        </thead>
+        {{#each orders}}
+        <tr>
+            <td>{{orderId}}</td>
+            <td><b>{{user.name}}</b></td>
+            <td>
+                {{#each products}}
+                <p><b>{{product.productName}}</b> x <b>{{quantity}}</b></p>
+                {{/each}}
+            </td>
+            <td><b>{{totalPrice}}</b></td>
+            <td><b>{{time}}</b></td>
+            {{#ifCond status 0 }}
+            <td class="blue-text-table"><b>New</b></td>
+            {{/ifCond}}
+            {{#ifCond status 1 }}
+            <td class="yellow-text-table"><b>Shipping</b></td>
+            {{/ifCond}}
+            {{#ifCond status 2 }}
+            <td class="green-text-table"><b>Finish</b></td>
+            {{/ifCond}}
+            <td class="text-right">
+                <a class="btn btn-default btn-xs" href="/order/editOrder?id={{orderId}}" role="button">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+

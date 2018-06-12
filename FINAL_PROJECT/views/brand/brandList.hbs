@@ -1,0 +1,34 @@
+<div class="panel-heading">
+    <h3 class="panel-title pull-left fix">Danh sách nhãn hiệu</h3>
+	<a href="/brand/addBrand" class="btn btn-default pull-right fix"><b>+</b> Thêm nhãn hiệu mới</a>
+</div>
+<div class="panel-body">
+    <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th class="text-left red-text-table">ID</th>
+                <th>Tên nhãn hiệu</th>
+                <th>Quốc gia - Năm thành lập</th>
+                <th>Mô tả</th>
+                <th class="text-right">Xóa / Sửa</th>
+            </tr>
+        </thead>
+        {{#each brands}}
+        <tr>
+            <td>{{brandId}}</td>
+            <td>{{brandName}}</td>
+            <td>{{country}} - {{foundedYear}}</td>
+            <td>{{description}}</td>
+            <td class="text-right">
+                <a class="btn btn-default btn-xs" href="/brand/delete?id={{brandId}}" role="button">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+                <a class="btn btn-default btn-xs" href="/brand/editBrand?id={{brandId}}" role="button">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+
