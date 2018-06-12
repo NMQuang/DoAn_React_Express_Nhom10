@@ -1,0 +1,491 @@
+@font-face {
+  font-family: Lobster;
+  src: url('../fonts/Lobster.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f3f5f6;
+}
+
+div.header {
+  height: 115px;
+  background: #2f4956;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+}
+
+.row {
+  margin-top: 80px;
+}
+.navbar-search {
+  height: 65px;
+}
+
+.navbar-search a {
+  color: white;
+}
+
+.header-logo {
+  padding-left: 10px;
+  padding-top: 13px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Lobster;
+  text-align: center;
+}
+
+.header-cart {
+  float: right;
+  padding-top: 25px;
+}
+
+.header-cart a {
+  height: 50px;
+  border: 3px;
+  border-style: solid;
+  border-color: #ffffff;
+  padding: 1em;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Consolas;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.header-cart a:hover {
+  background: #435b66;
+}
+
+.header-cart-count {
+  font-size: 10px;
+  background: #ff0000;
+  color: #fff;
+  padding: 4px 5px 4px 4px;
+  border-radius: 5px;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+#btn-search {
+  width: 100px;
+  font-weight: bold;
+  background: white;
+  box-shadow: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#btn-search:hover {
+  background: #d5dadd;
+  box-shadow: none;
+}
+
+.navbar-form {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+li.menu-li a {
+  color: white;
+  display: block;
+}
+
+li.menu-li a:hover {
+  color: white;
+  background-color: #435b66;
+}
+
+.dropbtn {
+  background-color: #2f4956;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #435b66;
+}
+
+.my-menu-dropdown ul:hover {
+  color: #2f4956;
+}
+
+.right-align {
+  width: 170px;
+  text-align: right;
+}
+
+input.form-login {
+  margin-bottom: 5px;
+}
+
+div.form-login {
+  background: #f3f5f6;
+}
+
+.dropdown-menu {
+  width: 300px !important;
+}
+
+.my-carousel {
+  margin-bottom: 0;
+  padding: 0 40px 30px 40px;
+}
+/* The controlsy */
+.my-carousel-control {
+  left: -12px;
+  height: 40px;
+  width: 40px;
+  background: none repeat scroll 0 0 #222222;
+  border: 4px solid #ffffff;
+  border-radius: 23px 23px 23px 23px;
+  margin-top: 90px;
+}
+.my-carousel-control.right {
+  right: -12px;
+}
+/* The indicators */
+.my-carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: -10px;
+  margin-right: -19px;
+}
+/* The colour of the indicators */
+.my-carousel-indicators li {
+  background: #cecece;
+}
+.my-carousel-indicators .active {
+  background: #428bca;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.7;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-family: Lobster;
+}
+
+.hr-text:before {
+  content: '';
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  background-color: #f3f5f6;
+}
+
+hr {
+  border: 0.5px solid #ccc;
+}
+
+.carousel .item-top-slide {
+  height: 500px;
+}
+/*
+inspired from https://codepen.io/Rowno/pen/Afykb 
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.thumbnail {
+  padding: 2px;
+  text-decoration: none;
+}
+
+.box {
+  position: relative;
+}
+
+.box img {
+  width: 250px;
+  height: 150px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.box:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+a.thumbnail {
+  text-decoration: none;
+}
+
+.box a {
+  position: absolute;
+  top: 65%;
+  left: 17%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.box:hover a {
+  opacity: 1;
+}
+
+.caption a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.caption a:active {
+  text-decoration: none;
+  color: #333333;
+}
+
+.thumbnail-carousel img {
+  width: 250px;
+  height: 180px;
+}
+
+.footer {
+  background: #2f4956;
+  height: auto;
+  padding-bottom: 30px;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #dddddd;
+}
+
+.footer h3 {
+  border-bottom: 1px solid #bac1c8;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  padding: 40px 0 10px;
+  font-family: Lobster;
+}
+.footer ul {
+  font-size: 14px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 15px;
+  color: #f5f5f5;
+}
+.footer li {
+  height: 30px;
+}
+.footer p ul li a {
+  color: #5bbd50;
+  font-size: 1px;
+  font-weight: 500;
+}
+.footer ul li a {
+  padding: 0 0 5px 0;
+  display: block;
+  text-decoration: none;
+}
+.footer a {
+  color: #fff;
+}
+
+.supportLi h4 {
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: normal;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-register {
+  width: 200px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.cart-text-padding-top {
+  padding-top: 5px;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #d5dadd;
+}
+
+.img-agency {
+  border-radius: 3px;
+  border-color: white;
+  border: 10px;
+}
+
+.img-agency:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.agency-info p {
+  text-align: center;
+  color: #586d77;
+}
+
+.panel-order .panel-heading {
+  background: #cfd9de;
+}
+
+.panel-order:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.panel-order .list-group-item {
+  color: #777777;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+.panel-order .list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.panel-order .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.food-info {
+  background: #fff;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.food-head img {
+  margin-left: -14px;
+}
+
+.food-head h3 {
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+
+.food-head p {
+  margin-top: 8px;
+  font-size: 16px;
+  height: 100%;
+}
+
+.table-branches {
+  margin-bottom: 5px;
+}
+
+.table-branches thead {
+  height: 50px;
+}
+
+td.middle {
+  vertical-align: middle;
+}
+
+.food-branches-location {
+  padding-left: 10px;
+  color: #586d77;
+}
