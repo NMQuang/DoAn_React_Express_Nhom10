@@ -21,6 +21,9 @@ var homeRouter = require('./routes/home');
 /* Client router*/
 var dangKyRouter = require('./routes/_dang_ky');
 
+//middlewares
+var handleLayout = require('./middlewares/handleLayout');
+
 var mongoDB = "mongodb://localhost:27017/InfinityDB";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -64,6 +67,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }));
+
+//use middlewares
+app.use(handleLayout);
 
 //app router
 
