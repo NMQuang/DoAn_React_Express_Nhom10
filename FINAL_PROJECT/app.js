@@ -74,6 +74,10 @@ app.get('/', (req, res) => {
     res.redirect('/home');
 });
 
+app.get('/admin', (req, res) => {
+    res.redirect('/admin/login');
+});
+
 app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
 // app.use('/account', accountRouter);
