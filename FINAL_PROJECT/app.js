@@ -19,7 +19,7 @@ var adminRouter = require('./routes/admin');
 var homeRouter = require('./routes/home');
 
 /* Client router*/
-var dangKyRouter = require('./routes/_dang_ky');
+var dangKyRouter = require('./routes/_nguoi_dung');
 
 //middlewares
 var handleLayout = require('./middlewares/handleLayout');
@@ -91,7 +91,7 @@ app.use('/order', orderRouter);
 app.use('/user', userRouter);
 
 //
-app.use('/_dang_ky', dangKyRouter);
+app.use('/_nguoi_dung', dangKyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

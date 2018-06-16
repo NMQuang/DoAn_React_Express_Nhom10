@@ -11,7 +11,7 @@ var userSchema = new schema({
     password: { type: String, required: true },
     phone: { type: String, required: true },
     genre: { type: String, required: true },
-    role: { type: Number, required: true}
+    address: { type: String, required: true },
 });
 
 userSchema.pre("save", function(next) {
