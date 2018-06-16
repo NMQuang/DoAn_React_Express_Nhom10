@@ -18,8 +18,8 @@ div.header {
   position: fixed;
 }
 
-.row {
-  margin-top: 80px;
+.header-row {
+  margin-top: 100px;
 }
 .navbar-search {
   height: 65px;
