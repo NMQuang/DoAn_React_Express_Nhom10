@@ -18,6 +18,9 @@ var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
 var homeRouter = require('./routes/home');
 
+/* Client router*/
+var dangKyRouter = require('./routes/_dang_ky');
+
 var mongoDB = "mongodb://localhost:27017/InfinityDB";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -76,6 +79,9 @@ app.use('/product', productRouter);
 app.use('/category', categoryRouter);
 app.use('/order', orderRouter);
 app.use('/user', userRouter);
+
+//
+app.use('/_dang_ky', dangKyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
