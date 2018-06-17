@@ -20,6 +20,8 @@ var homeRouter = require('./routes/home');
 
 /* Client router*/
 var dangKyRouter = require('./routes/_nguoi_dung');
+var gioHangRouter = require('./routes/_gio_hang');
+var sanPhamRouter = require('./routes/_san_pham');
 
 //middlewares
 var handleLayout = require('./middlewares/handleLayout');
@@ -92,6 +94,8 @@ app.use('/user', userRouter);
 
 //
 app.use('/_nguoi_dung', dangKyRouter);
+app.use('/_gio_hang', gioHangRouter);
+app.use('/_san_pham', sanPhamRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
