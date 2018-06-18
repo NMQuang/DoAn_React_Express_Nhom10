@@ -12,6 +12,11 @@
 	    $('#txtMQ').val(1);
 	    $('#frmMinusItem').submit();
 	});
+    $('.removeItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtRP').val(id);
+	    $('#frmRemoveItem').submit();
+	});
 </script>
 {{/section}}
 <div class="container">
@@ -22,6 +27,9 @@
     <form id="frmMinusItem" method="post" action="/cart/reduce">
 		<input type="hidden" name="proId" id="txtMP">
 		<input type="hidden" name="quantity" id="txtMQ">
+	</form>
+    <form id="frmRemoveItem" method="post" action="/cart/remove">
+		<input type="hidden" name="proId" id="txtRP">
 	</form>
     <div class="row header-row">
         <div class="col-lg-10 col-lg-offset-1">
@@ -62,9 +70,9 @@
                     <td class="col-md-1 text-center" id="price"><p class="cart-text-padding-top"><b>{{product.price}}</b></p></td>
                     <td class="col-md-2 text-center" id="priceFood"><p class="cart-text-padding-top"><b>{{price}}</b></p></td>
                     <td class="col-md-1 text-center">
-                        <button type="button" class="btn btn-danger removeItem">
+                        <a data-proid="{{product.productId}}" href="javascript:;" class="btn btn-danger removeItem">
                             <span class="glyphicon glyphicon-remove"></span>
-                        </button>
+                        </a>
                     </td>
                 </tr>
                 {{/each}}

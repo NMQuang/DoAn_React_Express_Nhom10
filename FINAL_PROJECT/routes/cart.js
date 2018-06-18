@@ -15,7 +15,7 @@ router.post('/add', function(req, res, next) {
                 price: product.price * +req.body.quantity
             };
             cartRepo.add(req.session.cart, item);
-            console.log("[Cart]", req.session.cart);
+            // console.log("[Cart]", req.session.cart);
             res.redirect(req.headers.referer);
         }
     });
