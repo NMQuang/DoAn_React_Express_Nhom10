@@ -1,4 +1,19 @@
+{{#section 'js'}}
+<script type="text/javascript">
+	$('.addItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtP').val(id);
+	    $('#txtQ').val(1);
+	    $('#frmAddItem').submit();
+	});
+</script>
+{{/section}}
+
 <div class="container">
+    <form id="frmAddItem" method="post" action="/cart/add">
+		<input type="hidden" name="proId" id="txtP">
+		<input type="hidden" name="quantity" id="txtQ">
+	</form>
     <!-- Top slide -->
     <div class="header-row row">
         <div id="top-slide" class="carousel slide carousel-fade" data-ride="carousel">
@@ -61,13 +76,19 @@
                         <div class="row" >
                             {{#each layoutVM.products}}
                             <div class="col-md-3">
-                                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel">
+                                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-5">
                                     <img alt="Image" src="{{thumbnail}}"
                                          class="img-responsive" style="width: 236px; height: 295px;">
                                     <div class="caption">
                                         <h4>{{productName}}</h4>
                                         <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                                     </div>
+                                    {{#if ../layoutVM.isLogged}}
+                                    <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        Đặt hàng
+                                    </a>
+                                    {{/if}}
                                 </a>
                             </div>
                             {{/each}}
@@ -100,13 +121,19 @@
                         <div class="row">
                             {{#each layoutVM.products}}
                             <div class="col-md-3">
-                                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel">
+                                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-5">
                                     <img alt="Image" src="{{thumbnail}}"
                                          class="img-responsive" style="width: 236px; height: 295px;">
                                     <div class="caption">
                                         <h4>{{productName}}</h4>
                                         <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                                     </div>
+                                    {{#if ../layoutVM.isLogged}}
+                                    <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        Đặt hàng
+                                    </a>
+                                    {{/if}}
                                 </a>
                             </div>
                             {{/each}}
@@ -139,13 +166,19 @@
                         <div class="row">
                             {{#each layoutVM.products}}
                             <div class="col-md-3">
-                                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel">
+                                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-5">
                                     <img alt="Image" src="{{thumbnail}}"
                                          class="img-responsive" style="width: 236px; height: 295px;">
                                     <div class="caption">
                                         <h4>{{productName}}</h4>
                                         <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                                     </div>
+                                    {{#if ../layoutVM.isLogged}}
+                                    <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        Đặt hàng
+                                    </a>
+                                    {{/if}}
                                 </a>
                             </div>
                             {{/each}}

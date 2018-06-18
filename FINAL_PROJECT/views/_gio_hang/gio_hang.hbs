@@ -1,5 +1,28 @@
-<!-- Body -->
+{{#section 'js'}}
+<script type="text/javascript">
+	$('.plusItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtPP').val(id);
+	    $('#txtPQ').val(1);
+	    $('#frmPlusItem').submit();
+	});
+    $('.minusItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtMP').val(id);
+	    $('#txtMQ').val(1);
+	    $('#frmMinusItem').submit();
+	});
+</script>
+{{/section}}
 <div class="container">
+    <form id="frmPlusItem" method="post" action="/cart/add">
+		<input type="hidden" name="proId" id="txtPP">
+		<input type="hidden" name="quantity" id="txtPQ">
+	</form>
+    <form id="frmMinusItem" method="post" action="/cart/reduce">
+		<input type="hidden" name="proId" id="txtMP">
+		<input type="hidden" name="quantity" id="txtMQ">
+	</form>
     <div class="row header-row">
         <div class="col-lg-10 col-lg-offset-1">
             <h4 style="padding-top: 14px"> <b>Thông tin giỏ hàng</b> </h4>
@@ -11,79 +34,43 @@
                     <th>Số lượng</th>
                     <th class="text-center">Đơn giá</th>
                     <th class="text-center">Tổng giá</th>
-                    <th> </th>
+                    <th class="text-center">Xóa</th>
                 </tr>
                 </thead>
                 <tbody>
+                {{#each carts}}
                 <tr>
-                    <td class="col-md-5">
+                    <td class="col-md-4">
                         <div class="media">
-                            <a class="pull-left" href="#"> <img class="media-object" src="http://placehold.it/250x200"
-                                                                style="width: 100px; height: 80px;"> </a>
+                            <a class="pull-left" href="#"> 
+                                <img class="media-object" src="{{product.thumbnail}}" style="width: 100px; height: auto;"> 
+                            </a>
                             <div class="media-body">
-                                <h4 class="media-heading cart-text-padding-top"><a href="#">Tên món ăn</a></h4>
+                                <h4 class="media-heading cart-text-padding-top"><a href="#">{{product.productName}}</a></h4>
                             </div>
                         </div>
                     </td>
-                    <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="amountFood" value="3">
+                    <td class="col-md-2" style="text-align: center">
+                        <a data-proid="{{product.productId}}" href="javascript:;" class="btn btn-default minusItem">
+                            <span class="glyphicon glyphicon-minus"></span>
+                        </a>
+                        <span style="font-weight: bold; margin: 15px; font-size: 20px;">{{quantity}}</span>  
+                        <a data-proid="{{product.productId}}" href="javascript:;" class="btn btn-default plusItem">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
                     </td>
-                    <td class="col-md-1 text-center" id="price"><p class="cart-text-padding-top"><b>$4.87</b></p></td>
-                    <td class="col-md-2 text-center" id="priceFood"><p class="cart-text-padding-top"><b>$14.61</b></p></td>
+                    <td class="col-md-1 text-center" id="price"><p class="cart-text-padding-top"><b>{{product.price}}</b></p></td>
+                    <td class="col-md-2 text-center" id="priceFood"><p class="cart-text-padding-top"><b>{{price}}</b></p></td>
                     <td class="col-md-1 text-center">
-                        <button type="button" class="btn btn-danger">
+                        <button type="button" class="btn btn-danger removeItem">
                             <span class="glyphicon glyphicon-remove"></span>
                         </button>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-5">
-                        <div class="media">
-                            <a class="pull-left" href="#"> <img class="media-object" src="http://placehold.it/250x200"
-                                                                style="width: 100px; height: 80px;"> </a>
-                            <div class="media-body">
-                                <h4 class="media-heading cart-text-padding-top"><a href="#">Tên món ăn</a></h4>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" value="2">
-                    </td>
-                    <td class="col-md-1 text-center"><p class="cart-text-padding-top"><b>$4.99</b></p></td>
-                    <td class="col-md-2 text-center"><p class="cart-text-padding-top"><b>$9.98</b></p></td>
-                    <td class="col-md-1 text-center">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="1"><h4 class="pull-left"><b>Chọn chi nhánh</b></h4>
-                    </td>
-                    <td colspan="2">
-                        <select class="list-group-item center-block" style="width: 180px">
-                            <option value="1">Chi nhánh 1</option>
-                            <option value="2">Chi nhánh 2</option>
-                            <option value="3">Chi nhánh 3</option>
-                            <option value="3">Chi nhánh 4</option>
-                        </select>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="3"><h4><b>Tạm tính</b></h4></td>
-                    <td class="text-center"><h5><strong>$24.59</strong></h5></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="3"><h4><b>Phí vận chuyển</b></h4></td>
-                    <td class="text-center"><h5><strong>$6.94</strong></h5></td>
-                    <td></td>
-                </tr>
+                {{/each}}
                 <tr>
                     <td colspan="3"><h4><b>Thành tiền</b></h4></td>
-                    <td class="text-center"><h4><strong>$31.53</strong></h4></td>
+                    <td class="text-center"><h4><strong>{{totalPrice}}</strong></h4></td>
                     <td></td>
                 </tr>
                 </tbody>

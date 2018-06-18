@@ -47,11 +47,11 @@ accountController.login = (req, res, next) => {
             } else {      
                 user.comparePassword(bale.password, function(err, isMatch) {
                     if(!isMatch) {
-                        console.log("Pass sai r th lz");
                         return res.redirect('/home');
                     } else {
                         req.session.isLogged = true;
                         req.session.currentUser = user;
+                        req.session.cart = [];
                         return res.redirect('/home');
                     }
                 });

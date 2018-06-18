@@ -18,6 +18,9 @@ var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
 var homeRouter = require('./routes/home');
 
+//Order Router
+var cartRouter = require('./routes/cart');
+
 /* Client router*/
 var dangKyRouter = require('./routes/_nguoi_dung');
 var gioHangRouter = require('./routes/_gio_hang');
@@ -91,6 +94,7 @@ app.use('/product', productRouter);
 app.use('/category', categoryRouter);
 app.use('/order', orderRouter);
 app.use('/user', userRouter);
+app.use('/cart', cartRouter);
 
 //
 app.use('/_nguoi_dung', dangKyRouter);

@@ -37,7 +37,7 @@
                     <a href="/_gio_hang/gio_hang">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         Giỏ hàng
-                        <b class="header-cart-count">0</b>
+                        <b class="header-cart-count">{{layoutVM.cartSummary}}</b>
                     </a>
                 </div>
             </div>
@@ -169,10 +169,11 @@
 <script src="/client_assets/js/jquery-3.2.1.js"></script>
 <script src="/client_assets/js/bootstrap.js"></script>
 <script src="/client_assets/js/myjs.js"></script>
-  <script type="text/javascript">
-		$('#linkLogout').on('click', function() {
-		    $('#formLogout').submit();
-		});
-	</script>
+<script type="text/javascript">
+    $('#linkLogout').on('click', function() {
+        $('#formLogout').submit();
+    });
+</script>
+{{{_sections.js}}}
 </body>
 </html>

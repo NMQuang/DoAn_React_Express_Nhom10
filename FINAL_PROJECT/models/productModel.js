@@ -11,7 +11,9 @@ var productSchema = new schema({
     price: { type: Number, required: true },
     brand: { type: schema.Types.ObjectId, ref: 'Brand' },
     category: { type: schema.Types.ObjectId, ref: 'Category' },
-    createdAt: { type: Date, required: true }
+    createdAt: { type: Date, required: true },
+    view: { type: Number, default: 0 },
+    purchases: { type: Number, default: 0 }
 });
 
 var Product = mongoose.model("Product", productSchema);
