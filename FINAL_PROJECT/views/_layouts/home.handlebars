@@ -68,12 +68,9 @@
                         &nbsp <b>LOẠI RƯỢU</b> &nbsp<b class="caret"></b>
                     </button>
                     <div class="dropdown-content">
-                        <a href="list-by-category.html">Tất cả</a>
-                        <a href="list-by-category.html">Cognac & Armagnac</a>
-                        <a href="list-by-category.html">Whisky & Bourbon</a>
-                        <a href="list-by-category.html">Brandy</a>
-                        <a href="list-by-category.html">Vodka</a>
-                        <a href="list-by-category.html">Champagne</a>
+                        {{#each layoutVM.categories}}
+                        <a href="/_chung_loai/chung_loai?id={{categoryId}}">{{categoryName}}</a>
+                        {{/each}}
                     </div>
                 </li>
             </ul>

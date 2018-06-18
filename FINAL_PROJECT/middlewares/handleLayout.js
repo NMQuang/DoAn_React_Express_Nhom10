@@ -8,35 +8,23 @@ module.exports = (req, res, next) => {
         req.session.isLogged = false;
     }
 
-    Product.find({})
-        .populate("brand")
-        .populate("category")
-        .exec(function(err, productDtos) {
-            if(err) console.log("Error", err);
-            else {
-                res.locals.layoutVM = {
-                    products: productDtos,
-                    isLogged: req.session.isLogged,
-                    // adminLogged: req.session.adminLogged,
-                    currenUser: req.session.currenUser,
-                    cartSummary: cartRepo.getNumberOfItems(req.session.cart)
-                }
-            }
-            next();
-        });
-    
-        Brand.find({}, function(err, brands) {
-                    var vm = {};
-                    if(err) {
-                        if(err) console.log("Error", err);
-                    } else {
-                        res.locals.layoutVM = {
-                            isLogged: req.session.isLogged,
-                            brands: brands,
-                            currenUser: req.session.currenUser,
-                            cartSummary: cartRepo.getNumberOfItems(req.session.cart)
-                        }
-                    }
-                    next();
-                });
+    var p1 = Brand.find({}).exec();
+    var p2 = Category.find({}).exec();
+    var p3 = Product.find({})
+    .populate("brand")
+    .populate("category")
+    .exec();
+
+    Promise.all([p1, p2, p3]).then(([ brands, categories, products]) => {
+        res.locals.layoutVM = {
+            brands: brands,
+            categories: categories,
+            products: products,
+            isLogged: req.session.isLogged,
+            currenUser: req.session.currenUser,
+            cartSummary: cartRepo.getNumberOfItems(req.session.cart)
+        }
+        next();
+    });
+
 }
