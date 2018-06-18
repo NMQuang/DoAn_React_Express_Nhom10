@@ -46,134 +46,22 @@
         </div>
         </div>
         <hr>
-        <h4 style="padding-top: 14px"> Kết quả tìm kiếm theo: <b>Nhãn hiệu Johnie Walker</b></h4>
+        <h4 style="padding-top: 14px"> Kết quả tìm kiếm theo: <b>Nhãn hiệu {{brandName}}</b></h4>
         <hr>
         <!-- Hiển thị kết quả tìm kiếm ở đây-->
         <div class="row">
+            {{#each products}}
             <div class="col-md-3">
                 <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-01.jpg"
+                    <img alt="Image" src="{{thumbnail}}"
                             class="img-responsive" style="width: 236px; height: 295px;">
                     <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
+                        <h4>{{productName}}</h4>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                     </div>
                 </a>
             </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-02.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-03.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-04.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-05.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.350.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-06.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.400.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-07.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.000.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-8.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 3.400.000 VND</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-01.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 750.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-02.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.150.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-03.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="thumbnail thumbnail-carousel">
-                    <img alt="Image" src="images/johnie/john-04.jpg"
-                            class="img-responsive" style="width: 236px; height: 295px;">
-                    <div class="caption">
-                        <h4>Johnie Walker</h4>
-                        <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: 1.300.000 VND</p>
-                    </div>
-                </a>
-            </div>
+            {{/each}}
         </div>
     </div>
 </div>
