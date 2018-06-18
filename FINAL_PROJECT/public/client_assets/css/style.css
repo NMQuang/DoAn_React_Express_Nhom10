@@ -493,3 +493,15 @@ td.middle {
 .m-b-5 {
     margin-bottom: 5px;
 }
+
+th.blue-text-table, td.blue-text-table {
+    color: #0D47A1;
+}
+
+th.green-text-table, td.green-text-table {
+    color: #00C853;
+}
+
+th.yellow-text-table, td.yellow-text-table {
+    color: #FFA000;
+}

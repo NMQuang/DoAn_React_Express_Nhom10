@@ -1,0 +1,45 @@
+<div class="container" style="margin-bottom: 150px;">
+    <div class="row header-row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h4 style="padding-top: 50px"> <b>Lịch sử mua hàng</b> </h4>
+            <hr>
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th style="width: 100px; background: #30A5FF; color: white;">Mã</th>
+                    <th style="background: #30A5FF; color: white;">Sản phẩm</th>
+                    <th class="text-center" style="background: #30A5FF; color: white;">Tổng tiền (VNĐ)</th>
+                    <th class="text-center" style="background: #30A5FF; color: white;">Thời gian đặt</th>
+                    <th class="text-center" style="background: #30A5FF; color: white;">Tình trạng</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {{#each orders}}
+                    <tr>
+                        <td><b>{{orderId}}</b></td>
+                        <td>
+                             {{#each products}}
+                            <p><b>{{product.productName}}</b> x <b>{{quantity}}</b></p>
+                            {{/each}}   
+                        </td>
+                        <td class="text-center">
+                            <b>{{totalPrice}}</b>
+                        </td>
+                        <td class="text-center"><b>{{time}}</b></td>
+                        {{#ifCond status 0 }}
+                        <td class="text-center blue-text-table"><b>Đã xác nhận đơn hàng</b></td>
+                        {{/ifCond}}
+                        {{#ifCond status 1 }}
+                        <td class="text-center yellow-text-table"><b>Đang giao hàng</b></td>
+                        {{/ifCond}}
+                        {{#ifCond status 2 }}
+                        <td class="text-center green-text-table"><b>Đã giao hàng</b></td>
+                        {{/ifCond}}
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- End body -->
