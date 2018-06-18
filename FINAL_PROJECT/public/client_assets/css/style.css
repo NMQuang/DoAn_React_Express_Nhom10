@@ -490,8 +490,12 @@ td.middle {
   color: #586d77;
 }
 
-.m-b-5 {
-    margin-bottom: 5px;
+.m-b-2 {
+    margin-bottom: 1px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
 }
 
 th.blue-text-table, td.blue-text-table {
