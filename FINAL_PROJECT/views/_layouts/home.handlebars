@@ -57,12 +57,9 @@
                         &nbsp <b>NHÃN HIỆU</b> &nbsp<b class="caret"></b>
                     </button>
                     <div class="dropdown-content">
-                        <a href="list-by-brand.html">Tất cả</a>
-                        <a href="list-by-brand.html">Chivas</a>
-                        <a href="list-by-brand.html">Hennessy</a>
-                        <a href="list-by-brand.html">Johnie Walker</a>
-                        <a href="list-by-brand.html">Re'my Martin</a>
-                        <a href="list-by-brand.html">Macallan</a>
+                        {{#each layoutVM.brands}}
+                        <a href="/_nhan_hieu/nhan_hieu?id={{brandId}}">{{brandName}}</a>
+                        {{/each}}
                     </div>
                 </li>
                 <li class="dropdown">

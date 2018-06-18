@@ -6,4 +6,5 @@ router.get('/', function(req, res, next) {
     res.render('home/homePage', { layout: 'home.handlebars' });
 });
 
+
 module.exports = router;

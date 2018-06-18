@@ -1,4 +1,6 @@
 var Product = require('../models/productModel');
+var Category = require('../models/categoryModel');
+var Brand = require('../models/brandModel');
 var cartRepo = require('../repos/cartRepo');
 
 module.exports = (req, res, next) => {
@@ -22,4 +24,19 @@ module.exports = (req, res, next) => {
             }
             next();
         });
+    
+        Brand.find({}, function(err, brands) {
+                    var vm = {};
+                    if(err) {
+                        if(err) console.log("Error", err);
+                    } else {
+                        res.locals.layoutVM = {
+                            isLogged: req.session.isLogged,
+                            brands: brands,
+                            currenUser: req.session.currenUser,
+                            cartSummary: cartRepo.getNumberOfItems(req.session.cart)
+                        }
+                    }
+                    next();
+                });
 }
