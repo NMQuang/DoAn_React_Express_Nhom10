@@ -31,7 +31,7 @@ var nhanHieuRouter = require('./routes/_nhan_hieu');
 //middlewares
 var handleLayout = require('./middlewares/handleLayout');
 
-var mongoDB = "mongodb://localhost:27017/InfinityDB";
+var mongoDB = "mongodb://quyenphamkhac:dolongdao123@ds151180.mlab.com:51180/infinitydb";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 
@@ -54,7 +54,7 @@ app.engine('hbs', exphbs({
             return nf.to(n);
         },
         ifCond: (v1, v2, options) => {
-             if(v1 === v2) {
+            if (v1 === v2) {
                 return options.fn(this);
             }
             return options.inverse(this);
@@ -66,7 +66,9 @@ app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+    extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
@@ -106,21 +108,21 @@ app.use('/_tim_kiem', timkiemRouter);
 app.use('/_nhan_hieu', nhanHieuRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use(function (req, res, next) {
+    next(createError(404));
 });
 
 //hihihi
 
 // error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;
