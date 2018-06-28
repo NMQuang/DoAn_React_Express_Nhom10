@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const _ = require('lodash')
 var Product = require('../models/productModel');
 const Brand = require('../models/brandModel')
 const Category = require('../models/categoryModel')
@@ -24,6 +25,14 @@ sanPhamController.render = async (req, res, next) => {
         _id: result.category
     })
 
+    vm.sameBrand = _.chunk(await Product.find({
+        brand: result.brand
+    }), 4)
+
+    vm.sameCategory = _.chunk(await Product.find({
+        category: result.category
+    }), 4)
+
     vm.product = {
         productName: result.productName,
         view: result.view,
@@ -34,6 +43,8 @@ sanPhamController.render = async (req, res, next) => {
         category: category.categoryName,
         thumbnail: result.thumbnail
     }
+
+    console.log(vm)
 
     res.render('_san_pham/san_pham', vm);
 }
