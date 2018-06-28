@@ -1,5 +1,20 @@
+{{#section 'js'}}
+<script type="text/javascript">
+	$('.addItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtP2').val(id);
+	    $('#txtQ2').val(1);
+	    $('#frmAddItem2').submit();
+	});
+</script>
+{{/section}}
+
 <!-- Body -->
 <div class="container">
+    <form id="frmAddItem2" method="post" action="/cart/add">
+		<input type="hidden" name="proId" id="txtP2">
+		<input type="hidden" name="quantity" id="txtQ2">
+	</form>
     <div class="col-lg-10 col-lg-offset-1">
         <!-- Hiển thị thông tin tìm kiếm ở đây -->
 
@@ -61,13 +76,19 @@
         <div class="row">
             {{#each products}}
             <div class="col-md-3" style="height: 500px;">
-                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel">
+                <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel" style="margin-bottom: 2px;">
                     <img alt="Image" src="{{thumbnail}}" class="img-responsive" style="width: 236px; height: 295px;">
                     <div class="caption">
                         <h4>{{productName}}</h4>
                         <p>
                             <i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
+                        {{#if ../layoutVM.isLogged}}
                     </div>
+                    <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Đặt hàng
+                    </a>
+                    {{/if}}
                 </a>
             </div>
             {{/each}}
