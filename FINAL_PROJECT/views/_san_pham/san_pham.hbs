@@ -28,7 +28,7 @@
                         <strong>
                             <i class="fa fa-diamond" aria-hidden="true"></i> Nhà sản xuất</strong>: {{product.brand}}</p>
 
-                     {{#if ../layoutVM.isLogged}}
+                    {{#if ../layoutVM.isLogged}}
                     <div class="text-center" style="margin-top: 32px; margin-bottom: 32px;">
                         <button class="btn btn-success btn-lg">Đặt hàng</button>
                         <a href="/_gio_hang/gio_hang" class="btn btn-info btn-lg">Xem giỏ hàng</a>
@@ -45,16 +45,17 @@
                 <div id="Carousel" class="carousel my-carousel slide carousel-fade">
                     <!-- Carousel items -->
                     <div class="carousel-inner">
+                        {{#each sameBrand}}
                         <div class="item active">
                             <div class="row">
                                 {{#each product.products_by_brand}}
                                 <div class="col-md-3" style="height: 500px;">
                                     <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-2">
-                                        <img alt="Image" src="{{thumbnail}}"
-                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                        <img alt="Image" src="{{thumbnail}}" class="img-responsive" style="width: 236px; height: 295px;">
                                         <div class="caption">
                                             <h4>{{productName}}</h4>
-                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
+                                            <p>
+                                                <i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                                         </div>
                                         {{#if ../layoutVM.isLogged}}
                                         <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
@@ -66,7 +67,6 @@
                                 </div>
                                 {{/each}}
                             </div>
-                            <!--.row-->
                         </div>
                     </div>
                 </div>
@@ -82,16 +82,17 @@
                 <div id="Carousel-1" class="carousel my-carousel slide carousel-fade">
                     <!-- Carousel items -->
                     <div class="carousel-inner">
+                        {{#each sameCategory}}
                         <div class="item active">
                             <div class="row">
                                 {{#each product.products_by_cat}}
                                 <div class="col-md-3" style="height: 500px;">
                                     <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-2">
-                                        <img alt="Image" src="{{thumbnail}}"
-                                            class="img-responsive" style="width: 236px; height: 295px;">
+                                        <img alt="Image" src="{{thumbnail}}" class="img-responsive" style="width: 236px; height: 295px;">
                                         <div class="caption">
                                             <h4>{{productName}}</h4>
-                                            <p><i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
+                                            <p>
+                                                <i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                                         </div>
                                         {{#if ../layoutVM.isLogged}}
                                         <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
