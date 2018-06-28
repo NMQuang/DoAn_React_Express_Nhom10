@@ -13,5 +13,22 @@ router.get('/info', function(req, res, next) {
     res.render('customer/customer', vm);
 });
 
+router.get('/change-password', function(req, res, next) {
+    var vm = {
+        layout: "home.handlebars"
+    }
+    res.render('customer/changePassword', vm); 
+});
+
+router.post('/change-password', function(req, res, next) {
+    var bale = req.body;
+    var user = new User(bale);
+    console.log(user);
+    var vm = {
+        layout: "home.handlebars"
+    }
+    res.render('customer/changePassword', vm); 
+});
+
 
 module.exports = router;
