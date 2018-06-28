@@ -22,7 +22,19 @@ sanPhamController.render = async (req, res, next) => {
 
     const category = await Category.findOne({
         _id: result.category
-    })
+    });
+
+    const products_by_brand = await Product.find({ brand: result.brand })
+        .populate("brand")
+        .populate("category")
+        .limit(10)
+        .exec();
+
+    const products_by_category = await Product.find({ category: result.category })
+        .populate("brand")
+        .populate("category")
+        .limit(10)
+        .exec();
 
     vm.product = {
         productName: result.productName,
@@ -32,7 +44,9 @@ sanPhamController.render = async (req, res, next) => {
         description: result.description,
         brand: brand.brandName,
         category: category.categoryName,
-        thumbnail: result.thumbnail
+        thumbnail: result.thumbnail,
+        products_by_brand: products_by_brand,
+        products_by_cat: products_by_category
     }
 
     res.render('_san_pham/san_pham', vm);

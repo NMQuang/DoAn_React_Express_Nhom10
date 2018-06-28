@@ -70,7 +70,7 @@
                     <div class="item active">
                         <div class="row" >
                             {{#each layoutVM.products}}
-                            <div class="col-md-3 m-b-10">
+                            <div class="col-md-3 m-b-10" style="height: 500px;">
                                 <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-2">
                                     <img alt="Image" src="{{thumbnail}}"
                                          class="img-responsive" style="width: 236px; height: 295px;">
@@ -106,8 +106,8 @@
                 <div class="carousel-inner">
                     <div class="item active">
                         <div class="row">
-                            {{#each layoutVM.products}}
-                            <div class="col-md-3 m-b-10">
+                            {{#each layoutVM.products_by_view}}
+                            <div class="col-md-3 m-b-10" style="height: 500px;">
                                 <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-2">
                                     <img alt="Image" src="{{thumbnail}}"
                                          class="img-responsive" style="width: 236px; height: 295px;">
@@ -143,8 +143,8 @@
                 <div class="carousel-inner">
                     <div class="item active">
                         <div class="row">
-                            {{#each layoutVM.products}}
-                            <div class="col-md-3 m-b-10">
+                            {{#each layoutVM.products_by_purchases}}
+                            <div class="col-md-3 m-b-10" style="height: 500px;">
                                 <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-2">
                                     <img alt="Image" src="{{thumbnail}}"
                                          class="img-responsive" style="width: 236px; height: 295px;">

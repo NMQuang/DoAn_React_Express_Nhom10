@@ -97,7 +97,7 @@ router.get('/productList', function(req, res, next) {
                 };
             } else {
                 vm = {
-                    products: productDtos
+                    products: productDtos.reverse()
                 };
                 res.render('product/productList', vm);
             }
