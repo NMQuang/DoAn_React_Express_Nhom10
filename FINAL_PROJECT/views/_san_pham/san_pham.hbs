@@ -1,5 +1,21 @@
 {{#section 'js'}}
 <script type="text/javascript">
+<<<<<<< HEAD
+    $('.addItem').on('click', function () {
+        var id = $(this).data('proid');
+        $('#txtP').val(id);
+        $('#txtQ').val(1);
+        $('#frmAddItem').submit();
+    });
+</script> {{/section}}
+
+<!-- Body -->
+<div class="container">
+    <form id="frmAddItem" method="post" action="/cart/add">
+        <input type="hidden" name="proId" id="txtP">
+        <input type="hidden" name="quantity" id="txtQ">
+    </form>
+=======
 	$('.addItem').on('click', function() {
 	    var id = $(this).data('proid');
 	    $('#txtP4').val(id);
@@ -15,6 +31,7 @@
 		<input type="hidden" name="proId" id="txtP4">
 		<input type="hidden" name="quantity" id="txtQ4">
 	</form>
+>>>>>>> 0d0081a47a2c8226eb0837de4b9ab5af3b339e76
     <div class="col-lg-10 col-lg-offset-1 header-row">
         <div class="row food-info">
             <div class="food-head">
