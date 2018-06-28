@@ -1,172 +1,208 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Infinity Wine - Trang chủ</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="/client_assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="/client_assets/css/font-awesome.css"/>
-    <link rel="stylesheet" href="/client_assets/css/style.css"/>
-    <link rel="stylesheet" href="/client_assets/css/list.css"/>
+    <link rel="stylesheet" href="/client_assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/client_assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="/client_assets/css/style.css" />
+    <link rel="stylesheet" href="/client_assets/css/list.css" />
     <!-- JS -->
 </head>
-<body>
-<!-- Header -->
-<div class="header">
-    <div class="container">
-        <!-- Navbar search -->
-        <div class="navbar-search">
-            <div class="col-lg-2">
-                <a href="/" style="text-decoration:none;">
-                    <p class="header-logo"> Infinity Wine </p>
-                </a>
-            </div>
-            <div class="col-lg-8">
-                <form class="navbar-form" role="search" style="margin-left: 28px">
-                    <div class="input-group col-md-12">
-                        <input type="text" class="form-control" placeholder="Tên loại rượu" name="q">
-                        <div class="input-group-btn">
-                            <button id="btn-search" class="btn btn-default" type="submit">
-                                Tìm kiếm
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-2">
-                <div class="header-cart">
-                    <a href="/_gio_hang/gio_hang">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        Giỏ hàng
-                        <b class="header-cart-count">{{layoutVM.cartSummary}}</b>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- End Navbar search -->
-        <!-- Navbar menu-->
-        <div class="navbar-menu">
-            <ul class="nav navbar-nav">
-                <li class="menu-li">
-                    <a href="/">
-                        <i class="fa fa-home" aria-hidden="true"></i> &nbsp <b>TRANG CHỦ</b>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <button class="dropbtn">
-                        <i class="fa fa-leaf" aria-hidden="true"></i>
-                        &nbsp <b>NHÃN HIỆU</b> &nbsp<b class="caret"></b>
-                    </button>
-                    <div class="dropdown-content">
-                        {{#each layoutVM.brands}}
-                        <a href="/_tim_kiem/nhan_hieu?id={{brandId}}">{{brandName}}</a>
-                        {{/each}}
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <button class="dropbtn">
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        &nbsp <b>LOẠI RƯỢU</b> &nbsp<b class="caret"></b>
-                    </button>
-                    <div class="dropdown-content">
-                        {{#each layoutVM.categories}}
-                        <a href="/_tim_kiem/loai_ruou?id={{categoryId}}">{{categoryName}}</a>
-                        {{/each}}
-                    </div>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                {{#if layoutVM.isLogged}}
-                <li class="dropdown dropdown-right">
-                    <button class="dropbtn">
-                        <i class="fa fa fa-user" aria-hidden="true"></i>
-                        &nbsp <b>NGƯỜI DÙNG</b> &nbsp<b class="caret"></b>
-                    </button>
-                    <div class="dropdown-content dropdown-menu-right">
-                        <a href="customer.html"> <em class="fa fa-user-secret">&nbsp;</em>Thông tin khách hàng</a>
-                        <a href="/_nguoi_dung/lich_su_mua_hang"> <em class="fa fa-list-alt">&nbsp;</em>Lịch sử mua hàng</a>
-                        <a id="linkLogout" href="javascript:;"><em class="fa fa-power-off">&nbsp;</em> Đăng xuất </a>
-                        <form id="formLogout" method="post" action="/_nguoi_dung/dang_xuat"></form>
-                    </div>
-                </li>
-                {{else}}
-                <li class="menu-li">
-                    <a href="/_nguoi_dung/dang_ky"><i class="fa fa-pencil-square-o"></i> &nbsp <b>ĐĂNG KÝ</b></a>
-                </li>
-                <li class="dropdown menu-li" style="padding-right: 15px">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <i class="fa fa-sign-in"></i> &nbsp<b>ĐĂNG NHẬP</b>
-                    </a>
-                    <div class="dropdown-menu form-login" style="padding: 15px; padding-bottom: 10px;">
-                        <form class="form-horizontal" accept-charset="UTF-8" action="/_nguoi_dung/dang_nhap" method="POST" role="form">
-                            <input id="usernameLogin" class="form-control form-login" type="text" name="email" placeholder="Email..." />
-                            <input id="passwordLogin" class="form-control form-login" type="password" name="password" placeholder="Mật khẩu..."/>
-                            <label class="form-check-label">
-                                <input id="saveLogin" name="saveLogin" type="checkbox" class="form-check-input">
-                                Ghi nhớ đăng nhập
-                            </label>
-                            <button class="btn btn-primary pull-right" type="submit">Đăng nhập</button>
-                        </form>
-                    </div>
-                </li>
-                {{/if}}
-            </ul>
-        </div>
-        <!-- End navbar -->
-    </div>
-</div>
-<!-- End header -->
-{{{body}}}
 
-<footer>
-    <div class="footer" id="footer">
+<body>
+    <!-- Header -->
+    <div class="header">
         <div class="container">
-            <div class="row col-md-10 col-md-offset-1">
-                <div class="col-md-4">
-                    <h3> Thông tin </h3>
-                    <ul>
-                        <li><p><i class="fa fa-phone"></i> &nbsp &nbspHotline: 0169xxxxxx </p></li>
-                        <li><p><i class="fa fa-users"></i> &nbsp Lượng người truy cập: 1000000 </p></li>
-                        <li><a href="introduce.html"> &nbsp <i class="fa fa-info"></i> &nbsp&nbspThông tin trang web </a></li>
-                    </ul>
+            <!-- Navbar search -->
+            <div class="navbar-search">
+                <div class="col-lg-2">
+                    <a href="/" style="text-decoration:none;">
+                        <p class="header-logo"> Infinity Wine </p>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <h3> Theo dõi qua mạng xã hội </h3>
-                    <ul>
-                        <li><a href="#"> <i class="fa fa-facebook-square"></i>&nbsp Facebook </a></li>
-                        <li><a href="#"> <i class="fa fa-twitter-square"></i>&nbsp Twitter </a></li>
-                        <li><a href="#"> <i class="fa fa-linkedin-square"></i>&nbsp Linkedin </a></li>
-                        <li><a href="#"> <i class="fa fa-google-plus-square"></i>&nbsp Google Plus </a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3> Theo dõi qua email </h3>
-                    <form role="subscribe">
-                        <div class="input-group col-md-12" style="">
-                            <input type="text" class="form-control" placeholder="Email của bạn" name="q">
+                <div class="col-lg-8">
+                    <form class="navbar-form" role="search" style="margin-left: 28px" action="/_tim_kiem/tim_kiem" method="post">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control" placeholder="Tên loại rượu" name="search">
                             <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
-                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                <button id="btn-search" class="btn btn-default" type="submit">
+                                    Tìm kiếm
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <div class="col-lg-2">
+                    <div class="header-cart">
+                        <a href="/_gio_hang/gio_hang">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            Giỏ hàng
+                            <b class="header-cart-count">{{layoutVM.cartSummary}}</b>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <!--/.row-->
+            <!-- End Navbar search -->
+            <!-- Navbar menu-->
+            <div class="navbar-menu">
+                <ul class="nav navbar-nav">
+                    <li class="menu-li">
+                        <a href="/">
+                            <i class="fa fa-home" aria-hidden="true"></i> &nbsp
+                            <b>TRANG CHỦ</b>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">
+                            <i class="fa fa-leaf" aria-hidden="true"></i>
+                            &nbsp
+                            <b>NHÃN HIỆU</b> &nbsp
+                            <b class="caret"></b>
+                        </button>
+                        <div class="dropdown-content">
+                            {{#each layoutVM.brands}}
+                            <a href="/_tim_kiem/nhan_hieu?id={{brandId}}">{{brandName}}</a>
+                            {{/each}}
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                            &nbsp
+                            <b>LOẠI RƯỢU</b> &nbsp
+                            <b class="caret"></b>
+                        </button>
+                        <div class="dropdown-content">
+                            {{#each layoutVM.categories}}
+                            <a href="/_tim_kiem/loai_ruou?id={{categoryId}}">{{categoryName}}</a>
+                            {{/each}}
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{#if layoutVM.isLogged}}
+                    <li class="dropdown dropdown-right">
+                        <button class="dropbtn">
+                            <i class="fa fa fa-user" aria-hidden="true"></i>
+                            &nbsp
+                            <b>NGƯỜI DÙNG</b> &nbsp
+                            <b class="caret"></b>
+                        </button>
+                        <div class="dropdown-content dropdown-menu-right">
+                            <a href="customer.html">
+                                <em class="fa fa-user-secret">&nbsp;</em>Thông tin khách hàng</a>
+                            <a href="/_nguoi_dung/lich_su_mua_hang">
+                                <em class="fa fa-list-alt">&nbsp;</em>Lịch sử mua hàng</a>
+                            <a id="linkLogout" href="javascript:;">
+                                <em class="fa fa-power-off">&nbsp;</em> Đăng xuất </a>
+                            <form id="formLogout" method="post" action="/_nguoi_dung/dang_xuat"></form>
+                        </div>
+                    </li>
+                    {{else}}
+                    <li class="menu-li">
+                        <a href="/_nguoi_dung/dang_ky">
+                            <i class="fa fa-pencil-square-o"></i> &nbsp
+                            <b>ĐĂNG KÝ</b>
+                        </a>
+                    </li>
+                    <li class="dropdown menu-li" style="padding-right: 15px">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="fa fa-sign-in"></i> &nbsp
+                            <b>ĐĂNG NHẬP</b>
+                        </a>
+                        <div class="dropdown-menu form-login" style="padding: 15px; padding-bottom: 10px;">
+                            <form class="form-horizontal" accept-charset="UTF-8" action="/_nguoi_dung/dang_nhap" method="POST" role="form">
+                                <input id="usernameLogin" class="form-control form-login" type="text" name="email" placeholder="Email..." />
+                                <input id="passwordLogin" class="form-control form-login" type="password" name="password" placeholder="Mật khẩu..." />
+                                <label class="form-check-label">
+                                    <input id="saveLogin" name="saveLogin" type="checkbox" class="form-check-input"> Ghi nhớ đăng nhập
+                                </label>
+                                <button class="btn btn-primary pull-right" type="submit">Đăng nhập</button>
+                            </form>
+                        </div>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+            <!-- End navbar -->
         </div>
-        <!--/.container-->
     </div>
-    <!--/.footer-->
-</footer>
-<!-- Script -->
-<script src="/client_assets/js/jquery-3.2.1.js"></script>
-<script src="/client_assets/js/bootstrap.js"></script>
-<script src="/client_assets/js/myjs.js"></script>
-<script type="text/javascript">
-    $('#linkLogout').on('click', function() {
-        $('#formLogout').submit();
-    });
-</script>
-{{{_sections.js}}}
+    <!-- End header -->
+    {{{body}}}
+
+    <footer>
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="row col-md-10 col-md-offset-1">
+                    <div class="col-md-4">
+                        <h3> Thông tin </h3>
+                        <ul>
+                            <li>
+                                <p>
+                                    <i class="fa fa-phone"></i> &nbsp &nbspHotline: 0169xxxxxx </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i class="fa fa-users"></i> &nbsp Lượng người truy cập: 1000000 </p>
+                            </li>
+                            <li>
+                                <a href="introduce.html"> &nbsp
+                                    <i class="fa fa-info"></i> &nbsp&nbspThông tin trang web </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Theo dõi qua mạng xã hội </h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>&nbsp Facebook </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter-square"></i>&nbsp Twitter </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-linkedin-square"></i>&nbsp Linkedin </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-google-plus-square"></i>&nbsp Google Plus </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Theo dõi qua email </h3>
+                        <form role="subscribe">
+                            <div class="input-group col-md-12" style="">
+                                <input type="text" class="form-control" placeholder="Email của bạn" name="q">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.footer-->
+    </footer>
+    <!-- Script -->
+    <script src="/client_assets/js/jquery-3.2.1.js"></script>
+    <script src="/client_assets/js/bootstrap.js"></script>
+    <script src="/client_assets/js/myjs.js"></script>
+    <script type="text/javascript">
+        $('#linkLogout').on('click', function () {
+            $('#formLogout').submit();
+        });
+    </script> {{{_sections.js}}}
 </body>
+
 </html>
