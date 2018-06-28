@@ -23,6 +23,26 @@ router.get('/change-password', function(req, res, next) {
     }
     res.render('customer/changePassword', vm); 
 });
+
+router.post('/change-password', function(req, res, next) {
+
+    var bale = req.body;
+    const userId = req.session.currentUser._id
+    const user = req.session.currentUser;
+
+    const vm = {
+        layout: "home.handlebars"
+    }
+    const updateInfo = {}
+    
+
+    const result = User.findByIdAndUpdate({
+        _id: userId
+    }, updateInfo)  
+
+    res.render('customer/changePassword', vm); 
+});
+
 router.post('/change-info', async (req, res) => {
     const userId = req.session.currentUser._id
     const {
@@ -36,18 +56,6 @@ router.post('/change-info', async (req, res) => {
     }
     const updateInfo = {}
 
-router.post('/change-password', function(req, res, next) {
-    var bale = req.body;
-    var user = new User(bale);
-    console.log(user);
-    var vm = {
-        layout: "home.handlebars"
-    }
-    res.render('customer/changePassword', vm); 
-});
-
-
-module.exports = router;
     if (phoneNumber) {
         updateInfo.phone = phoneNumber
     }
