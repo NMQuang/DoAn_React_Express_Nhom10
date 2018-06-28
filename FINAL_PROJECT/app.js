@@ -17,6 +17,7 @@ var orderRouter = require('./routes/order');
 var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
 var homeRouter = require('./routes/home');
+var customerRouter = require('./routes/customer');
 
 //Order Router
 var cartRouter = require('./routes/cart');
@@ -107,6 +108,7 @@ app.use('/_gio_hang', gioHangRouter);
 app.use('/_san_pham', sanPhamRouter);
 app.use('/_tim_kiem', timkiemRouter);
 app.use('/_nhan_hieu', nhanHieuRouter);
+app.use('/customer', customerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
