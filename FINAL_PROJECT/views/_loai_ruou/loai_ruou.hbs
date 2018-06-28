@@ -7,51 +7,50 @@
             <h4 style="padding-top: 160px">
                 <b> Tìm kiếm nâng cao</b>
             </h4>
-            <div class="col-md-12 list-search">
-                <div class="form-group search-item">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-book" aria-hidden="true"></i>
+            <form action="/_tim_kiem/tim_kiem" method="post">
+                <div class="col-md-12 list-search">
+                    <div class="form-group search-item">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Tên sản phẩm" name="wineName">
                         </div>
-                        <input type="text" class="form-control" placeholder="Tên sản phẩm">
+                    </div>
+                    <div class="form-group search-item">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-gg" aria-hidden="true"></i>
+                            </div>
+                            <input type="number" class="form-control" placeholder="Giá tiền" name="winePrice">
+                        </div>
+                    </div>
+                    <div class="form-group search-item">
+                        <select class="form-control " style="min-width: 175px" name="wineBrand">
+                            <option value="0">Nhà sản xuất</option>
+                            <option value="1">Chivas</option>
+                            <option value="2">Hennessy</option>
+                            <option value="3">Johnie Walker</option>
+                            <option value="4">Re'my Martin</option>
+                        </select>
+                    </div>
+                    <div class="form-group search-item">
+                        <select class="form-control " style="min-width: 175px" name="wineType">
+                            <option value="0">Loại rượu</option>
+                            <option value="1">Vodka</option>
+                            <option value="2">Rum</option>
+                            <option value="3">Champagne</option>
+                            <option value="4">Whisky</option>
+                        </select>
+                    </div>
+                    <div class="form-group search-item">
+                        <button class="btn btn-primary" style="min-width: 120px" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <b>Search</b>
+                        </button>
                     </div>
                 </div>
-                <div class="form-group search-item">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-gg" aria-hidden="true"></i>
-                        </div>
-                        <input type="number" class="form-control" placeholder="Giá tiền">
-                    </div>
-                </div>
-                <div class="form-group search-item">
-                    <select class="form-control " style="min-width: 175px">\
-                        <option>Nhà sản xuất</option>
-                        <option>Johnie Walker</option>
-                        <option>Chivas</option>
-                        <option>Hennessy</option>
-                        <option>Re'my Martin</option>
-                        <option>Macallan</option>
-                    </select>
-                </div>
-                <div class="form-group search-item">
-                    <select class="form-control " style="min-width: 175px">
-                        <option>Loại rượu</option>
-                        <option>Cognac</option>
-                        <option>Armagnac</option>
-                        <option>Whisky</option>
-                        <option>Champagne</option>
-                        <option>Vodka</option>
-                        <option>Brandy</option>
-                    </select>
-                </div>
-                <div class="form-group search-item">
-                    <button class="btn btn-primary" style="min-width: 120px">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <b>Search</b>
-                    </button>
-                </div>
-            </div>
+            </form>
         </div>
         <hr>
         <h4 style="padding-top: 14px"> Kết quả tìm kiếm theo:

@@ -84,22 +84,66 @@ router.get('/loai_ruou', function (req, res, next) {
 });
 
 router.post('/tim_kiem', async (req, res, next) => {
-    const search = req.body.search
+    const {
+        wineName,
+        winePrice,
+        wineBrand,
+        wineType
+    } = req.body
 
-    const vm = {
-        layout: 'home.handlebars',
-    };
+    if (winePrice === undefined && wineBrand === undefined && wineType === undefined) {
+        const vm = {
+            layout: 'home.handlebars',
+        };
 
-    const re = new RegExp(_.escapeRegExp(search), 'i');
+        const re = new RegExp(_.escapeRegExp(wineName), 'i');
 
-    const listProd = await Product.find({})
+        const listProd = await Product.find({})
 
-    vm.products = listProd.filter(product => {
-        if (re.test(product.productName))
-            return product
-    })
+        vm.products = listProd.filter(product => {
+            if (re.test(product.productName))
+                return product
+        })
 
-    res.render('_tim_kiem/tim_kiem', vm)
+        res.render('_tim_kiem/tim_kiem', vm)
+    } else {
+        let query = {}
+        const vm = {
+            layout: 'home.handlebars',
+            products: []
+        }
+
+        if (wineName) {
+            query.productName = {
+                $regex: wineName,
+                $options: 'i'
+            }
+        }
+
+        if (wineBrand !== '0') {
+            const brand = await Brand.findOne({
+                brandId: wineBrand
+            })
+            query.brand = brand._id
+        }
+
+        if (wineType !== '0') {
+            const category = await Category.findOne({
+                categoryId: wineType
+            })
+            query.category = category._id
+        }
+
+        if (winePrice) {
+            query.price = {
+                $lt: winePrice
+            }
+        }
+
+        vm.products = await Product.find(query)
+
+        res.render('_tim_kiem/tim_kiem', vm)
+    }
 });
 
 module.exports = router;
