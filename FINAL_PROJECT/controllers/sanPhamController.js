@@ -25,13 +25,17 @@ sanPhamController.render = async (req, res, next) => {
         _id: result.category
     });
 
-    const products_by_brand = await Product.find({ brand: result.brand })
+    const products_by_brand = await Product.find({
+            brand: result.brand
+        })
         .populate("brand")
         .populate("category")
         .limit(10)
         .exec();
 
-    const products_by_category = await Product.find({ category: result.category })
+    const products_by_category = await Product.find({
+            category: result.category
+        })
         .populate("brand")
         .populate("category")
         .limit(10)
@@ -57,8 +61,6 @@ sanPhamController.render = async (req, res, next) => {
         products_by_brand: products_by_brand,
         products_by_cat: products_by_category
     }
-
-    console.log(vm)
 
     res.render('_san_pham/san_pham', vm);
 }

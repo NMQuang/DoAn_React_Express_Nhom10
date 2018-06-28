@@ -31,8 +31,8 @@ var nhanHieuRouter = require('./routes/_nhan_hieu');
 //middlewares
 var handleLayout = require('./middlewares/handleLayout');
 
-// var mongoDB = "mongodb://quyenphamkhac:dolongdao123@ds151180.mlab.com:51180/infinitydb";
-var mongoDB = "mongodb://localhost:27017/InfinityDB";
+var mongoDB = "mongodb://quyenphamkhac:dolongdao123@ds151180.mlab.com:51180/infinitydb";
+// var mongoDB = "mongodb://localhost:27017/InfinityDB";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 
