@@ -1,5 +1,6 @@
 {{#section 'js'}}
 <script type="text/javascript">
+
     $('.addItem').on('click', function () {
         var id = $(this).data('proid');
         $('#txtP').val(id);
@@ -10,6 +11,8 @@
 
 <!-- Body -->
 <div class="container">
+
+
     <form id="frmAddItem" method="post" action="/cart/add">
         <input type="hidden" name="proId" id="txtP">
         <input type="hidden" name="quantity" id="txtQ">
