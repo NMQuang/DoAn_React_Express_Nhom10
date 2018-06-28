@@ -50,6 +50,7 @@ sanPhamController.render = async (req, res, next) => {
     }), 4)
 
     vm.product = {
+        productId:  result.productId,
         productName: result.productName,
         view: result.view,
         purchases: result.purchases,
