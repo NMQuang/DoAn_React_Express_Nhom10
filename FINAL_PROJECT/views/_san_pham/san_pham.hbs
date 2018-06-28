@@ -3,7 +3,7 @@
     <div class="col-lg-10 col-lg-offset-1 header-row">
         <div class="row food-info">
             <div class="food-head">
-                <div class="col-lg-6" style="padding-top: 32px;">
+                <div class="col-lg-6" style="padding-top: 32px; padding-bottom: 32px;">
                     <img src={{product.thumbnail}} class="img-responsive center-block wine-img-style" style="max-height: 400px; margin: 0 auto;"
                     />
                 </div>
@@ -23,14 +23,17 @@
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i> Lượt mua</strong>: {{product.purchases}} lượt</p>
                     <p>
                         <strong>
-                            <i class="fa fa-shopping-tag" aria-hidden="true"></i> Loại rượu</strong>: {{product.category}}</p>
+                            <i class="fa fa-tag" aria-hidden="true"></i> Loại rượu</strong>: {{product.category}}</p>
                     <p>
                         <strong>
-                            <i class="fa fa-shopping-diamond" aria-hidden="true"></i> Nhà sản xuất</strong>: {{product.brand}}</p>
+                            <i class="fa fa-diamond" aria-hidden="true"></i> Nhà sản xuất</strong>: {{product.brand}}</p>
+
+                    {{#if ../layoutVM.isLogged}}
                     <div class="text-center" style="margin-top: 32px; margin-bottom: 32px;">
                         <button class="btn btn-success btn-lg">Đặt hàng</button>
                         <a href="/_gio_hang/gio_hang" class="btn btn-info btn-lg">Xem giỏ hàng</a>
                     </div>
+                    {{/if}}
                 </div>
             </div>
         </div>
@@ -40,35 +43,32 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="Carousel" class="carousel my-carousel slide carousel-fade">
-                    <ol class="carousel-indicators my-carousel-indicators">
-                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel" data-slide-to="1"></li>
-                        <li data-target="#Carousel" data-slide-to="2"></li>
-                    </ol>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         {{#each sameBrand}}
                         <div class="item active">
                             <div class="row">
-                                {{#each this}}
-                                <div class="col-md-3">
-                                    <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel">
-                                        <img alt="Image" src={{thumbnail}} class="img-responsive" style="width: 236px; height: 295px;">
+                                {{#each product.products_by_brand}}
+                                <div class="col-md-3" style="height: 500px;">
+                                    <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-2">
+                                        <img alt="Image" src="{{thumbnail}}" class="img-responsive" style="width: 236px; height: 295px;">
                                         <div class="caption">
                                             <h4>{{productName}}</h4>
                                             <p>
                                                 <i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                                         </div>
+                                        {{#if ../layoutVM.isLogged}}
+                                        <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                            Đặt hàng
+                                        </a>
+                                        {{/if}}
                                     </a>
                                 </div>
                                 {{/each}}
                             </div>
                         </div>
-                        {{/each}}
                     </div>
-                    <!--.carousel-inner-->
-                    <a data-slide="prev" href="#Carousel" class="left carousel-control my-carousel-control">‹</a>
-                    <a data-slide="next" href="#Carousel" class="right carousel-control my-carousel-control">›</a>
                 </div>
                 <!--.Carousel-->
             </div>
@@ -80,35 +80,34 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="Carousel-1" class="carousel my-carousel slide carousel-fade">
-                    <ol class="carousel-indicators my-carousel-indicators">
-                        <li data-target="#Carousel-1" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel-1" data-slide-to="1"></li>
-                        <li data-target="#Carousel-1" data-slide-to="2"></li>
-                    </ol>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         {{#each sameCategory}}
                         <div class="item active">
                             <div class="row">
-                                {{#each this}}
-                                <div class="col-md-3">
-                                    <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel">
-                                        <img alt="Image" src={{thumbnail}} class="img-responsive" style="width: 236px; height: 295px;">
+                                {{#each product.products_by_cat}}
+                                <div class="col-md-3" style="height: 500px;">
+                                    <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel m-b-2">
+                                        <img alt="Image" src="{{thumbnail}}" class="img-responsive" style="width: 236px; height: 295px;">
                                         <div class="caption">
                                             <h4>{{productName}}</h4>
                                             <p>
                                                 <i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
                                         </div>
+                                        {{#if ../layoutVM.isLogged}}
+                                        <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                            Đặt hàng
+                                        </a>
+                                        {{/if}}
                                     </a>
                                 </div>
                                 {{/each}}
                             </div>
+                            <!--.row-->
                         </div>
-                        {{/each}}
                     </div>
                     <!--.carousel-inner-->
-                    <a data-slide="prev" href="#Carousel-1" class="left carousel-control my-carousel-control">‹</a>
-                    <a data-slide="next" href="#Carousel-1" class="right carousel-control my-carousel-control">›</a>
                 </div>
                 <!--.Carousel-->
             </div>
