@@ -52,7 +52,7 @@ accountController.login = (req, res, next) => {
                         req.session.isLogged = true;
                         req.session.currentUser = user;
                         req.session.cart = [];
-                        return res.redirect('/home');
+                        return res.redirect(req.headers.referer);
                     }
                 });
             }

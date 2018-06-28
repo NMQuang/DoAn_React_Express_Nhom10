@@ -83,6 +83,10 @@ router.get('/loai_ruou', function (req, res, next) {
     );
 });
 
+router.get('/tim_kiem', function(req, res, next) {
+    res.redirect('/home');
+});
+
 router.post('/tim_kiem', async (req, res, next) => {
     const {
         wineName,

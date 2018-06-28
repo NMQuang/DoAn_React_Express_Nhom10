@@ -8,6 +8,7 @@ var cartRepo = require('../repos/cartRepo');
 var moment = require('moment');
 
 router.post('/add', function(req, res, next) {
+    console.log(req.body.proId);
     Product.findOne({ productId: req.body.proId }, function(err, product) {
         if (err) {
             console.log("[Error]", err);

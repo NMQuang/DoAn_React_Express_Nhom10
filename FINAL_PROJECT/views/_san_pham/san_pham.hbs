@@ -1,5 +1,6 @@
 {{#section 'js'}}
 <script type="text/javascript">
+<<<<<<< HEAD
     $('.addItem').on('click', function () {
         var id = $(this).data('proid');
         $('#txtP').val(id);
@@ -14,6 +15,23 @@
         <input type="hidden" name="proId" id="txtP">
         <input type="hidden" name="quantity" id="txtQ">
     </form>
+=======
+	$('.addItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtP4').val(id);
+	    $('#txtQ4').val(1);
+	    $('#frmAddItem4').submit();
+	});
+</script>
+{{/section}}
+
+<!-- Body -->
+<div class="container">
+     <form id="frmAddItem4" method="post" action="/cart/add">
+		<input type="hidden" name="proId" id="txtP4">
+		<input type="hidden" name="quantity" id="txtQ4">
+	</form>
+>>>>>>> 0d0081a47a2c8226eb0837de4b9ab5af3b339e76
     <div class="col-lg-10 col-lg-offset-1 header-row">
         <div class="row food-info">
             <div class="food-head">
@@ -42,11 +60,11 @@
                         <strong>
                             <i class="fa fa-diamond" aria-hidden="true"></i> Nhà sản xuất</strong>: {{product.brand}}</p>
 
-                    {{#if ../layoutVM.isLogged}}
-                    <div class="text-center" style="margin-top: 32px; margin-bottom: 32px;">
-                        <button class="btn btn-success btn-lg">Đặt hàng</button>
-                        <a href="/_gio_hang/gio_hang" class="btn btn-info btn-lg">Xem giỏ hàng</a>
-                    </div>
+                    {{#if layoutVM.isLogged}}
+                    <a data-proid="{{product.productId}}" href="javascript:;" class="btn btn-success btn-lg addItem" style="width: 100%;">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Đặt hàng
+                    </a>
                     {{/if}}
                 </div>
             </div>
