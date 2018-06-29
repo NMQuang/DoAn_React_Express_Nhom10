@@ -5,6 +5,26 @@ var moment = require('moment');
 
 var Order = require('../models/orderModel');
 
+router.get('/delete', function(req, res, next) {
+    if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
+        return res.redirect('/admin/login')
+    }
+    var id = req.query.id;
+    if(id === undefined) {
+        return res.redirect('/order/orderList');
+    }
+
+    var vm = {};
+
+    Order.findOneAndRemove({ orderId: id }, function(err, result) {
+        if(err) {
+            return res.redirect('/order/orderList');
+        } else {
+            return res.redirect('/order/orderList');
+        }
+    });
+})
+
 router.get('/editOrder', function(req, res, next) {
     if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
         return res.redirect('/admin/login')

@@ -11,6 +11,26 @@ var upload = multer({ storage: cUpload.storage() });
 
 var images = require('../configs/images');
 
+router.get('/delete', function(req, res, next) {
+    if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
+        return res.redirect('/admin/login')
+    }
+    var id = req.query.id;
+    if(id === undefined) {
+        return res.redirect('/product/productList');
+    }
+
+    var vm = {};
+
+    Product.findOneAndRemove({ productId: id }, function(err, result) {
+        if(err) {
+            return res.redirect('/product/productList');
+        } else {
+            return res.redirect('/product/productList');
+        }
+    });
+});
+
 router.get('/editProduct', function(req, res, next) {
     if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
         return res.redirect('/admin/login')

@@ -5,6 +5,26 @@ var brandController = require('../controllers/brandController');
 
 var Brand = require('../models/brandModel');
 
+router.get('/delete', function(req, res, next) {
+    if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
+        return res.redirect('/admin/login')
+    }
+    var id = req.query.id;
+    if(id === undefined) {
+        return res.redirect('/brand/brandList');
+    }
+
+    var vm = {};
+
+    Brand.findOneAndRemove({ brandId: id }, function(err, result) {
+        if(err) {
+            return res.redirect('/brand/brandList');
+        } else {
+            return res.redirect('/brand/brandList');
+        }
+    });
+});
+
 router.get('/editBrand', function(req, res, next) {
     if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
         return res.redirect('/admin/login')

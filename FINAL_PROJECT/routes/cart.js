@@ -49,6 +49,10 @@ router.post('/remove', function(req, res, next) {
     res.redirect(req.headers.referer);
 });
 
+router.get('/checkout', function(req, res, next) {
+    res.redirect('/_gio_hang/gio_hang');
+});
+
 router.post('/checkout', function(req, res, next) {
     var products = req.session.cart.map((item) => {
         return {

@@ -3,6 +3,26 @@ var router = express.Router();
 
 var Category = require('../models/categoryModel');
 
+router.get('/delete', function(req, res, next) {
+    if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
+        return res.redirect('/admin/login')
+    }
+    var id = req.query.id;
+    if(id === undefined) {
+        return res.redirect('/category/categoryList');
+    }
+
+    var vm = {};
+
+    Category.findOneAndRemove({ categoryId: id }, function(err, result) {
+        if(err) {
+            return res.redirect('/category/categoryList');
+        } else {
+            return res.redirect('/category/categoryList');
+        }
+    });
+});
+
 router.get('/editCategory', function(req, res, next) {
     if(req.session.adminLogged === false || req.session.adminLogged === undefined) {
         return res.redirect('/admin/login')

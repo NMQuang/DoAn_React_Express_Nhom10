@@ -74,7 +74,7 @@
         <hr>
         <!-- Hiển thị kết quả tìm kiếm ở đây-->
         <div class="row">
-            {{#each products}}
+             {{#each products}}
             <div class="col-md-3" style="height: 500px;">
                 <a href="/_san_pham/san_pham?id={{productId}}" class="thumbnail thumbnail-carousel" style="margin-bottom: 2px;">
                     <img alt="Image" src="{{thumbnail}}" class="img-responsive" style="width: 236px; height: 295px;">
@@ -82,14 +82,14 @@
                         <h4>{{productName}}</h4>
                         <p>
                             <i class="fa fa-tag" aria-hidden="true"></i> &nbsp Giá: {{price}} VND</p>
-                        {{#if ../layoutVM.isLogged}}
                     </div>
-                    <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
-                        <span class="glyphicon glyphicon-shopping-cart"></span>
-                        Đặt hàng
-                    </a>
-                    {{/if}}
                 </a>
+                {{#if ../layoutVM.isLogged}}
+                <a data-proid="{{productId}}" href="javascript:;" class="btn btn-default addItem" style="width: 100%;">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    Đặt hàng
+                </a>
+                {{/if}}
             </div>
             {{/each}}
         </div>
